@@ -14,14 +14,24 @@ This presentation covers the complete ACE methodology, including:
 - **Experimental Results**: Performance on AppWorld and Financial benchmarks
 - **Real Examples**: Code snippets, playbook samples, and practical insights
 
+## 🌐 Live Presentation
+
+**🎯 [View Live Presentation](https://agentic-context-engineering.vercel.app/)**
+
+The presentation is now deployed and accessible to anyone worldwide! Perfect for sharing, presenting, or educational use.
+
 ## 🚀 Quick Start
 
-### Prerequisites
+### Option 1: View Online (Recommended)
+Simply visit: **[https://agentic-context-engineering.vercel.app/](https://agentic-context-engineering.vercel.app/)**
 
+### Option 2: Run Locally
+
+**Prerequisites:**
 - Node.js (v16 or higher)
 - npm or yarn
 
-### Installation
+**Installation:**
 
 1. **Clone or navigate to the project directory:**
    ```bash
@@ -171,6 +181,22 @@ This presentation is for educational purposes. Please cite the original ACE pape
 - **Institutions**: Stanford University & SambaNova Systems
 - **Year**: 2025
 
+## 🚀 Deployment
+
+This presentation is deployed on Vercel for free hosting:
+
+- **Live URL**: [https://agentic-context-engineering.vercel.app/](https://agentic-context-engineering.vercel.app/)
+- **Platform**: Vercel (automatic deployments from GitHub)
+- **Features**: Global CDN, HTTPS, custom domain
+- **Auto-deploy**: Updates automatically when you push to GitHub
+
+### Deploy Your Own Copy
+
+1. Fork this repository
+2. Connect to Vercel
+3. Set root directory to `ACE_Project`
+4. Deploy!
+
 ## 📞 Support
 
 If you encounter any issues or have questions:
@@ -186,4 +212,4 @@ Navigate through the slides to explore the fascinating world of Agentic Context 
 
 ---
 
-*Built with ❤️ using React, TypeScript, and Tailwind CSS*
+**Presented by Arpit Tiwari** | *Built with ❤️ using React, TypeScript, and Tailwind CSS*
