@@ -1,4 +1,4 @@
-# WEB_APP - Data Science & Gen AI Projects Collection
+# DS_GENAI_PRESENTATIONS - Data Science & Gen AI Projects Collection
 
 A comprehensive collection of web applications, presentations, and interactive projects focused on Data Science, Machine Learning, and Generative AI technologies.
 
@@ -14,7 +14,7 @@ This repository contains multiple projects showcasing cutting-edge applications 
 ## 📁 Project Structure
 
 ```
-WEB_APP/
+DS_GENAI_PRESENTATIONS/
 ├── ACE_Project/                    # Agentic Context Engineering Presentation
 │   ├── src/                       # React TypeScript source code
 │   ├── README.md                  # Project-specific documentation
