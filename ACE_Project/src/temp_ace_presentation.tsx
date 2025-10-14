@@ -33,52 +33,52 @@ const ACEPresentation = () => {
       content: (
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
-            <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">45-60 Minute Deep Dive</h3>
+            <h3 className="text-3xl font-bold text-center text-gray-800 mb-4">45-60 Minute Deep Dive</h3>
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded-lg border-2 border-blue-200 shadow">
-              <div className="flex items-center space-x-2 mb-2">
-                <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">1</div>
-                <h4 className="font-bold text-blue-700">Motivation & Problems</h4>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-white p-6 rounded-lg border-2 border-blue-200 shadow">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">1</div>
+                <h4 className="font-bold text-blue-700 text-xl">Motivation & Problems</h4>
               </div>
-              <ul className="text-sm text-gray-600 ml-10 space-y-1">
+              <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Context adaptation paradigm</li>
                 <li>• Brevity bias explained</li>
                 <li>• Context collapse crisis</li>
               </ul>
             </div>
 
-            <div className="bg-white p-4 rounded-lg border-2 border-purple-200 shadow">
-              <div className="flex items-center space-x-2 mb-2">
-                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">2</div>
-                <h4 className="font-bold text-purple-700">The ACE Solution</h4>
+            <div className="bg-white p-6 rounded-lg border-2 border-purple-200 shadow">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">2</div>
+                <h4 className="font-bold text-purple-700 text-xl">The ACE Solution</h4>
               </div>
-              <ul className="text-sm text-gray-600 ml-10 space-y-1">
+              <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Core philosophy</li>
                 <li>• Three-agent architecture</li>
                 <li>• Technical innovations</li>
               </ul>
             </div>
 
-            <div className="bg-white p-4 rounded-lg border-2 border-green-200 shadow">
-              <div className="flex items-center space-x-2 mb-2">
-                <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">3</div>
-                <h4 className="font-bold text-green-700">How It Works</h4>
+            <div className="bg-white p-6 rounded-lg border-2 border-green-200 shadow">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">3</div>
+                <h4 className="font-bold text-green-700 text-xl">How It Works</h4>
               </div>
-              <ul className="text-sm text-gray-600 ml-10 space-y-1">
+              <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Complete workflow</li>
                 <li>• Delta updates mechanism</li>
                 <li>• Real examples & code</li>
               </ul>
             </div>
 
-            <div className="bg-white p-4 rounded-lg border-2 border-orange-200 shadow">
-              <div className="flex items-center space-x-2 mb-2">
-                <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">4</div>
-                <h4 className="font-bold text-orange-700">Results & Impact</h4>
+            <div className="bg-white p-6 rounded-lg border-2 border-orange-200 shadow">
+              <div className="flex items-center space-x-3 mb-3">
+                <div className="bg-orange-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">4</div>
+                <h4 className="font-bold text-orange-700 text-xl">Results & Impact</h4>
               </div>
-              <ul className="text-sm text-gray-600 ml-10 space-y-1">
+              <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Benchmark performance</li>
                 <li>• Baseline comparisons</li>
                 <li>• Real-world applications</li>
@@ -86,8 +86,8 @@ const ACEPresentation = () => {
             </div>
           </div>
 
-          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400 mt-4">
-            <p className="text-sm font-semibold text-gray-700">
+          <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400 mt-6">
+            <p className="text-base font-semibold text-gray-700">
               💡 This presentation includes code examples, real data from experiments, and practical insights
             </p>
           </div>
@@ -101,101 +101,101 @@ const ACEPresentation = () => {
       content: (
         <div className="space-y-4">
           <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-200">
-            <h3 className="text-2xl font-bold text-blue-800 mb-3">The Central Challenge:</h3>
-            <p className="text-xl text-gray-700">
+            <h3 className="text-3xl font-bold text-blue-800 mb-4">The Central Challenge:</h3>
+            <p className="text-2xl text-gray-700">
               How can LLMs continuously improve and adapt WITHOUT expensive retraining?
             </p>
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-red-50 p-4 rounded-lg border-2 border-red-200">
-              <p className="font-bold text-red-700 mb-3 text-lg">❌ Traditional Approach: Weight Updates</p>
-              <div className="space-y-2 text-sm text-gray-700">
-                <div className="flex items-start space-x-2">
-                  <span className="text-red-500 font-bold">•</span>
+          <div className="grid grid-cols-2 gap-6">
+            <div className="bg-red-50 p-6 rounded-lg border-2 border-red-200">
+              <p className="font-bold text-red-700 mb-4 text-xl">❌ Traditional Approach: Weight Updates</p>
+              <div className="space-y-3 text-base text-gray-700">
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Collect new training data</p>
-                    <p className="text-xs text-gray-600">Time-consuming annotation</p>
+                    <p className="font-semibold text-lg">Collect new training data</p>
+                    <p className="text-sm text-gray-600">Time-consuming annotation</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-red-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Fine-tune or retrain model</p>
-                    <p className="text-xs text-gray-600">Requires GPUs, days/weeks</p>
+                    <p className="font-semibold text-lg">Fine-tune or retrain model</p>
+                    <p className="text-sm text-gray-600">Requires GPUs, days/weeks</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-red-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">High cost ($$$)</p>
-                    <p className="text-xs text-gray-600">Compute + engineer time</p>
+                    <p className="font-semibold text-lg">High cost ($$$)</p>
+                    <p className="text-sm text-gray-600">Compute + engineer time</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-red-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Not interpretable</p>
-                    <p className="text-xs text-gray-600">Black box weight changes</p>
+                    <p className="font-semibold text-lg">Not interpretable</p>
+                    <p className="text-sm text-gray-600">Black box weight changes</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-red-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-red-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Risk of catastrophic forgetting</p>
-                    <p className="text-xs text-gray-600">May lose old knowledge</p>
+                    <p className="font-semibold text-lg">Risk of catastrophic forgetting</p>
+                    <p className="text-sm text-gray-600">May lose old knowledge</p>
                   </div>
                 </div>
               </div>
             </div>
             
-            <div className="bg-green-50 p-4 rounded-lg border-2 border-green-200">
-              <p className="font-bold text-green-700 mb-3 text-lg">✅ ACE Approach: Context Updates</p>
-              <div className="space-y-2 text-sm text-gray-700">
-                <div className="flex items-start space-x-2">
-                  <span className="text-green-500 font-bold">•</span>
+            <div className="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+              <p className="font-bold text-green-700 mb-4 text-xl">✅ ACE Approach: Context Updates</p>
+              <div className="space-y-3 text-base text-gray-700">
+                <div className="flex items-start space-x-3">
+                  <span className="text-green-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Modify input context only</p>
-                    <p className="text-xs text-gray-600">No weight changes needed</p>
+                    <p className="font-semibold text-lg">Modify input context only</p>
+                    <p className="text-sm text-gray-600">No weight changes needed</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-green-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-green-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Build knowledge playbook</p>
-                    <p className="text-xs text-gray-600">Accumulates strategies</p>
+                    <p className="font-semibold text-lg">Build knowledge playbook</p>
+                    <p className="text-sm text-gray-600">Accumulates strategies</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-green-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-green-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Fast & cheap</p>
-                    <p className="text-xs text-gray-600">86.9% lower latency</p>
+                    <p className="font-semibold text-lg">Fast & cheap</p>
+                    <p className="text-sm text-gray-600">86.9% lower latency</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-green-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-green-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Real-time updates</p>
-                    <p className="text-xs text-gray-600">Adapt during inference</p>
+                    <p className="font-semibold text-lg">Real-time updates</p>
+                    <p className="text-sm text-gray-600">Adapt during inference</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span className="text-green-500 font-bold">•</span>
+                <div className="flex items-start space-x-3">
+                  <span className="text-green-500 font-bold text-lg">•</span>
                   <div>
-                    <p className="font-semibold">Human-readable</p>
-                    <p className="text-xs text-gray-600">Interpretable strategies</p>
+                    <p className="font-semibold text-lg">Human-readable</p>
+                    <p className="text-sm text-gray-600">Interpretable strategies</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
-            <p className="text-lg font-semibold text-gray-800 mb-2">
+          <div className="bg-yellow-50 p-6 rounded-lg border-l-4 border-yellow-400">
+            <p className="text-xl font-semibold text-gray-800 mb-3">
               💡 Key Insight: Improve through CONTEXT, not weights!
             </p>
-            <p className="text-sm text-gray-600">
+            <p className="text-base text-gray-600">
               With modern long-context LLMs (100K+ tokens) and KV cache reuse, context-based adaptation is now practical and efficient
             </p>
           </div>
@@ -1557,6 +1557,34 @@ const ACEPresentation = () => {
           </div>
         </div>
       )
+    },
+
+    // Slide 16: Thank You
+    {
+      title: "Thank You",
+      content: (
+        <div className="flex flex-col items-center justify-center h-full space-y-8">
+          <div className="text-8xl mb-6">🎉</div>
+          <div className="text-center space-y-6">
+            <h2 className="text-5xl font-bold text-blue-600 mb-4">Thank You!</h2>
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg max-w-3xl">
+              <p className="text-2xl text-gray-700 mb-4">
+                Questions & Discussion
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                ACE: Agentic Context Engineering for Self-Improving Language Models
+              </p>
+              <div className="border-t pt-4">
+                <p className="text-xl font-semibold text-gray-800">Presented by</p>
+                <p className="text-2xl font-bold text-blue-600 mt-2">Arpit Tiwari</p>
+                <p className="text-sm text-gray-500 mt-4">
+                  Stanford University & SambaNova Systems | arXiv:2510.04618
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
     }
   ];
 
@@ -1587,78 +1615,75 @@ const ACEPresentation = () => {
   }, [currentSlide]);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold mb-2">ACE: Agentic Context Engineering</h1>
-          <p className="text-lg opacity-90">Teaching LLMs to Build Their Own Playbooks</p>
+    <div className="h-screen w-screen bg-white flex flex-col overflow-hidden">
+      {/* Header - Only show on title slide */}
+      {currentSlide === 0 && (
+        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 flex-shrink-0">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="text-4xl font-bold mb-2">ACE: Agentic Context Engineering</h1>
+            <p className="text-lg opacity-90">Teaching LLMs to Build Their Own Playbooks</p>
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Slide Content */}
-      <div className="flex-1 flex items-center justify-center p-8">
-        <div className="max-w-6xl mx-auto w-full">
-          <div className="bg-white rounded-lg shadow-xl min-h-[500px] p-12 flex flex-col justify-center">
-            <div className="text-center mb-8">
-              <div className="text-6xl mb-6">🤖📚</div>
-              <h2 className="text-4xl font-bold text-blue-600 mb-4">
+      <div className="flex-1 flex items-start justify-center p-4 overflow-hidden">
+        <div className="w-full h-full">
+          <div className="bg-white rounded-lg shadow-xl h-full p-8 flex flex-col justify-start overflow-y-auto">
+            <div className="text-center mb-6 pt-4">
+              <div className="text-5xl mb-4">🤖📚</div>
+              <h2 className="text-3xl font-bold text-blue-600 mb-6">
                 {slides[currentSlide].title}
               </h2>
             </div>
-            <div className="prose max-w-none">
+            <div className="prose max-w-none flex-1">
               {slides[currentSlide].content}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer Navigation */}
-      <div className="bg-gray-800 text-white p-6">
+      {/* Minimal Footer Navigation */}
+      <div className="bg-gray-900 text-white p-3 flex-shrink-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <button
               onClick={prevSlide}
-              className="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors flex items-center space-x-2"
+              className="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded transition-colors flex items-center space-x-1 text-sm"
               disabled={currentSlide === 0}
             >
-              <ChevronLeft size={16} />
-              <span>Previous</span>
+              <ChevronLeft size={14} />
+              <span>Prev</span>
             </button>
           </div>
           
           <div className="flex flex-col items-center">
-            <div className="flex space-x-2 mb-2">
+            <div className="flex space-x-1 mb-1">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
+                  className={`w-2 h-2 rounded-full transition-colors ${
                     index === currentSlide
-                      ? 'bg-blue-500'
+                      ? 'bg-blue-400'
                       : 'bg-gray-600 hover:bg-gray-500'
                   }`}
                 />
               ))}
             </div>
-            <p className="text-sm text-gray-400 mb-1">Use ← → arrow keys or click to navigate</p>
-            <p className="text-sm text-gray-500">Slide {currentSlide + 1} of {slides.length}</p>
+            <p className="text-xs text-gray-400">Slide {currentSlide + 1} of {slides.length}</p>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2">
             <button
               onClick={nextSlide}
-              className="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors flex items-center space-x-2"
+              className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded transition-colors flex items-center space-x-1 text-sm"
               disabled={currentSlide === slides.length - 1}
             >
               <span>Next</span>
-              <ChevronRight size={16} />
+              <ChevronRight size={14} />
             </button>
           </div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto mt-4 text-right">
-          <p className="text-sm text-gray-400">ACE: Agentic Context Engineering</p>
         </div>
       </div>
     </div>
