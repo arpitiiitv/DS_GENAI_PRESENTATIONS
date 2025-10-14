@@ -2,6 +2,8 @@
 
 A comprehensive, interactive presentation about Agentic Context Engineering (ACE) - a revolutionary approach to self-improving language models through context adaptation rather than weight updates.
 
+**Part of the DS_GENAI_PRESENTATIONS collection** - A repository showcasing Data Science and Generative AI projects.
+
 ## 🎯 Overview
 
 This presentation covers the complete ACE methodology, including:
