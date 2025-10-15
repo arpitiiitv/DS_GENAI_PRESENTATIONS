@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Code, Brain, Book, CheckCircle, TrendingUp, Database } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ACEPresentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -1965,34 +1965,28 @@ const ACEPresentation = () => {
 
   return (
     <div className="h-screen w-screen bg-white flex flex-col overflow-hidden">
-      {/* Header - Only show on title slide */}
-      {currentSlide === 0 && (
-        <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 flex-shrink-0">
+      {/* Top Header - Always visible with slide-specific title */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-5 flex-shrink-0">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl font-bold mb-2">ACE: Agentic Context Engineering</h1>
-          <p className="text-lg opacity-90">Teaching LLMs to Build Their Own Playbooks</p>
+          <h1 className="text-3xl font-bold">{slides[currentSlide].title}</h1>
+          {slides[currentSlide].subtitle && (
+            <p className="text-lg opacity-90 mt-1">{slides[currentSlide].subtitle}</p>
+          )}
         </div>
       </div>
-      )}
 
-      {/* Slide Content */}
+      {/* Main Content Area */}
       <div className="flex-1 flex items-start justify-center p-4 overflow-hidden">
         <div className="w-full h-full">
-          <div className="bg-white rounded-lg shadow-xl h-full p-8 flex flex-col justify-start overflow-y-auto">
-            <div className="text-center mb-6 pt-4">
-              <div className="text-5xl mb-4">🤖📚</div>
-              <h2 className="text-3xl font-bold text-blue-600 mb-6">
-                {slides[currentSlide].title}
-              </h2>
-            </div>
-            <div className="prose max-w-none flex-1">
+          <div className="bg-white h-full flex flex-col justify-start overflow-y-auto">
+            <div className="p-6">
               {slides[currentSlide].content}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Minimal Footer Navigation */}
+      {/* Bottom Footer Navigation */}
       <div className="bg-gray-900 text-white p-3 flex-shrink-0">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-2">
