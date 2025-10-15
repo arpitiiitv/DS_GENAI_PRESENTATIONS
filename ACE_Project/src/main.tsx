@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import ACEPresentation from './temp_ace_presentation.tsx'
+import ACEPresentation from './temp_ace_presentation'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

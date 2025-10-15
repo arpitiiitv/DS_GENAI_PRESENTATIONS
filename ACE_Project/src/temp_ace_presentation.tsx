@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Book, Zap, TrendingUp, AlertTriangle, CheckCircle, Code, Brain, Target, ArrowRight, Database, Layers, GitBranch } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Code, Brain, Book, CheckCircle, TrendingUp, Database } from 'lucide-react';
 
 const ACEPresentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,6 +22,7 @@ const ACEPresentation = () => {
             <p className="text-xl text-gray-600">Stanford University & SambaNova Systems</p>
             <p className="text-lg text-gray-500">Qizheng Zhang, Changran Hu, et al., 2025</p>
             <p className="text-sm text-gray-400 mt-4">arXiv:2510.04618</p>
+            <p className="text-sm text-gray-500 mt-2 font-semibold">Presented by Arpit Tiwari</p>
           </div>
         </div>
       )
@@ -219,7 +220,7 @@ const ACEPresentation = () => {
           <div className="space-y-3">
             <div className="bg-white p-4 rounded-lg border-l-4 border-blue-400 shadow">
               <div className="flex items-start space-x-3">
-                <Code className="text-blue-600 mt-1" size={24} />
+                <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">ICL</div>
                 <div className="flex-1">
                   <h4 className="font-bold text-blue-700 mb-1">In-Context Learning (ICL)</h4>
                   <p className="text-sm text-gray-600 mb-2">Provide task demonstrations in the prompt (few-shot or many-shot)</p>
@@ -233,7 +234,7 @@ const ACEPresentation = () => {
 
             <div className="bg-white p-4 rounded-lg border-l-4 border-green-400 shadow">
               <div className="flex items-start space-x-3">
-                <TrendingUp className="text-green-600 mt-1" size={24} />
+                <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">GEPA</div>
                 <div className="flex-1">
                   <h4 className="font-bold text-green-700 mb-1">GEPA (Genetic-Pareto Prompt Evolution)</h4>
                   <p className="text-sm text-gray-600 mb-2">Iteratively optimizes prompts using execution traces and genetic search</p>
@@ -249,7 +250,7 @@ const ACEPresentation = () => {
 
             <div className="bg-white p-4 rounded-lg border-l-4 border-purple-400 shadow">
               <div className="flex items-start space-x-3">
-                <Database className="text-purple-600 mt-1" size={24} />
+                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">DC</div>
                 <div className="flex-1">
                   <h4 className="font-bold text-purple-700 mb-1">Dynamic Cheatsheet (DC)</h4>
                   <p className="text-sm text-gray-600 mb-2">Test-time learning with adaptive external memory</p>
@@ -273,7 +274,7 @@ const ACEPresentation = () => {
       )
     },
 
-    // Slide 5: Problem 1 - Brevity Bias (Detailed)
+    // Slide 5: Problem 1 - Brevity Bias
     {
       title: "Problem #1: Brevity Bias",
       content: (
@@ -291,7 +292,7 @@ const ACEPresentation = () => {
           </div>
 
           <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
-            <p className="font-bold text-gray-800 mb-3">📊 Real Example from Test Generation (Gao et al.):</p>
+            <p className="font-bold text-gray-800 mb-3">📊 Real Example from Test Generation:</p>
             
             <div className="space-y-3">
               <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
@@ -340,7 +341,7 @@ const ACEPresentation = () => {
       )
     },
 
-    // Slide 6: Problem 2 - Context Collapse (Detailed)
+    // Slide 6: Problem 2 - Context Collapse
     {
       title: "Problem #2: Context Collapse",
       content: (
@@ -440,35 +441,35 @@ const ACEPresentation = () => {
               </h4>
               <div className="space-y-2 text-sm text-gray-700">
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="text-green-500 mt-0.5" size={16} />
+                  <span className="text-green-500 font-bold text-lg">✓</span>
                   <div>
                     <p className="font-semibold">Contains MANY specific plays</p>
                     <p className="text-xs text-gray-600">Not "play well" but "when opponent does X, do Y"</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="text-green-500 mt-0.5" size={16} />
+                  <span className="text-green-500 font-bold text-lg">✓</span>
                   <div>
                     <p className="font-semibold">Details for different situations</p>
                     <p className="text-xs text-gray-600">Different plays for different game states</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="text-green-500 mt-0.5" size={16} />
+                  <span className="text-green-500 font-bold text-lg">✓</span>
                   <div>
                     <p className="font-semibold">Accumulated team wisdom</p>
                     <p className="text-xs text-gray-600">Learned from wins AND losses</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="text-green-500 mt-0.5" size={16} />
+                  <span className="text-green-500 font-bold text-lg">✓</span>
                   <div>
                     <p className="font-semibold">Grows over seasons</p>
                     <p className="text-xs text-gray-600">Gets thicker, not replaced</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-2">
-                  <CheckCircle className="text-green-500 mt-0.5" size={16} />
+                  <span className="text-green-500 font-bold text-lg">✓</span>
                   <div>
                     <p className="font-semibold">Organized but comprehensive</p>
                     <p className="text-xs text-gray-600">Indexed by situation, not summarized</p>
@@ -546,10 +547,10 @@ const ACEPresentation = () => {
             <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
               <div className="flex items-start space-x-3">
                 <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
-                  <Code size={20} />
+                  <span className="text-lg">1</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-bold text-lg text-blue-800 mb-2">1. Generator</h4>
+                  <h4 className="font-bold text-lg text-blue-800 mb-2">Generator</h4>
                   <p className="text-sm text-gray-700 mb-2"><strong>Role:</strong> The "doer" - solves the actual task</p>
                   
                   <div className="grid grid-cols-2 gap-2 text-xs mb-2">
@@ -565,15 +566,6 @@ const ACEPresentation = () => {
                     </div>
                   </div>
                   
-                  <div className="bg-white p-2 rounded text-xs font-mono">
-                    <p className="text-gray-500"># Example Generator behavior:</p>
-                    <p className="text-blue-600">def generate(task, playbook):</p>
-                    <p className="text-blue-600 ml-4">relevant_bullets = retrieve(task, playbook)</p>
-                    <p className="text-blue-600 ml-4">solution = llm.solve(task, context=relevant_bullets)</p>
-                    <p className="text-blue-600 ml-4">mark_helpful_bullets(solution.bullets_used)</p>
-                    <p className="text-blue-600 ml-4">return solution</p>
-                  </div>
-                  
                   <p className="text-xs text-gray-600 mt-2 italic">
                     💡 Key: Marks which playbook strategies were helpful or harmful during execution
                   </p>
@@ -584,10 +576,10 @@ const ACEPresentation = () => {
             <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
               <div className="flex items-start space-x-3">
                 <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
-                  <Brain size={20} />
+                  <span className="text-lg">2</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-bold text-lg text-purple-800 mb-2">2. Reflector</h4>
+                  <h4 className="font-bold text-lg text-purple-800 mb-2">Reflector</h4>
                   <p className="text-sm text-gray-700 mb-2"><strong>Role:</strong> The "critic" - analyzes what went wrong/right</p>
                   
                   <div className="grid grid-cols-2 gap-2 text-xs mb-2">
@@ -605,14 +597,6 @@ const ACEPresentation = () => {
                     </div>
                   </div>
                   
-                  <div className="bg-white p-2 rounded text-xs">
-                    <p className="font-semibold text-gray-800 mb-1">Example Reflection Output:</p>
-                    <p className="text-gray-700">"<strong>Error:</strong> Used transaction descriptions to identify roommates"</p>
-                    <p className="text-gray-700">"<strong>Root Cause:</strong> Misunderstood data architecture - Phone app is authoritative"</p>
-                    <p className="text-gray-700">"<strong>Correct Approach:</strong> Use apis.phone.search_contacts(relationship='roommate')"</p>
-                    <p className="text-gray-700">"<strong>Key Insight:</strong> Always resolve identities from source app, not heuristics"</p>
-                  </div>
-                  
                   <p className="text-xs text-gray-600 mt-2 italic">
                     ⚡ Can refine analysis iteratively (up to 5 rounds) for higher quality insights
                   </p>
@@ -623,10 +607,10 @@ const ACEPresentation = () => {
             <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
               <div className="flex items-start space-x-3">
                 <div className="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0 font-bold">
-                  <Book size={20} />
+                  <span className="text-lg">3</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-bold text-lg text-green-800 mb-2">3. Curator</h4>
+                  <h4 className="font-bold text-lg text-green-800 mb-2">Curator</h4>
                   <p className="text-sm text-gray-700 mb-2"><strong>Role:</strong> The "librarian" - organizes knowledge into playbook</p>
                   
                   <div className="grid grid-cols-2 gap-2 text-xs mb-2">
@@ -642,17 +626,6 @@ const ACEPresentation = () => {
                     </div>
                   </div>
                   
-                  <div className="bg-white p-2 rounded text-xs font-mono">
-                    <p className="text-gray-500"># Example Curator output (JSON):</p>
-                    <p className="text-green-600">{"{"}</p>
-                    <p className="text-green-600 ml-2">"operations": [{"{"}</p>
-                    <p className="text-green-600 ml-4">"type": "ADD",</p>
-                    <p className="text-green-600 ml-4">"section": "strategies",</p>
-                    <p className="text-green-600 ml-4">"content": "Always use Phone app..."</p>
-                    <p className="text-green-600 ml-2">{"}"}]</p>
-                    <p className="text-green-600">{"}"}</p>
-                  </div>
-                  
                   <p className="text-xs text-gray-600 mt-2 italic">
                     🔑 Critical: Only generates NEW bullets to ADD, never rewrites the entire playbook!
                   </p>
@@ -664,456 +637,392 @@ const ACEPresentation = () => {
       )
     },
 
-    // Slide 9: Complete ACE Workflow
+    // Slide 9: Complete Workflow
     {
-      title: "The Complete ACE Workflow",
-      content: (
-        <div className="space-y-3">
-          <div className="bg-gradient-to-r from-blue-100 to-purple-100 p-4 rounded-lg">
-            <h3 className="text-lg font-bold text-center text-gray-800">
-              How ACE Learns: Step-by-Step Example
-            </h3>
-          </div>
-
-          <div className="space-y-2">
-            <div className="flex items-start space-x-3">
-              <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-sm">1</div>
-              <div className="flex-1 bg-blue-50 p-3 rounded-lg">
-                <p className="font-bold text-blue-800 text-sm mb-1">New Task Arrives</p>
-                <div className="bg-white p-2 rounded text-xs">
-                  <p className="font-mono text-gray-700">"Send $50 bill split request to all roommates for cable bill"</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-3">
-              <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-sm">2</div>
-              <div className="flex-1 bg-purple-50 p-3 rounded-lg">
-                <p className="font-bold text-purple-800 text-sm mb-1">Generator Attempts Solution</p>
-                <div className="bg-white p-2 rounded text-xs space-y-1">
-                  <p className="text-gray-700">• Retrieves relevant playbook bullets</p>
-                  <p className="text-gray-700">• Writes code using current knowledge</p>
-                  <p className="font-mono text-blue-600 mt-1">roommates = venmo.search("roommate") # Wrong!</p>
-                  <p className="font-mono text-blue-600">venmo.send_request(roommates, 50)</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-3">
-              <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-sm">3</div>
-              <div className="flex-1 bg-orange-50 p-3 rounded-lg">
-                <p className="font-bold text-orange-800 text-sm mb-1">Execution & Feedback</p>
-                <div className="bg-white p-2 rounded text-xs space-y-1">
-                  <p className="text-red-600 font-semibold">❌ Test Failed</p>
-                  <p className="text-gray-700">Expected: 3 roommates found</p>
-                  <p className="text-gray-700">Actual: 0 roommates found</p>
-                  <p className="text-gray-500 mt-1 italic">Unit test shows incorrect roommate identification</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-3">
-              <div className="bg-pink-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-sm">4</div>
-              <div className="flex-1 bg-pink-50 p-3 rounded-lg">
-                <p className="font-bold text-pink-800 text-sm mb-1">Reflector Analyzes</p>
-                <div className="bg-white p-2 rounded text-xs space-y-1">
-                  <p className="text-gray-800"><strong>Error:</strong> Used Venmo API to search for "roommate"</p>
-                  <p className="text-gray-800"><strong>Root Cause:</strong> Assumed transaction descriptions contain relationship info</p>
-                  <p className="text-gray-800"><strong>Correct:</strong> Phone app is authoritative source for contacts</p>
-                  <p className="text-green-700 mt-1 font-semibold">Should use: apis.phone.search_contacts(relationship="roommate")</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-3">
-              <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-sm">5</div>
-              <div className="flex-1 bg-green-50 p-3 rounded-lg">
-                <p className="font-bold text-green-800 text-sm mb-1">Curator Updates Playbook</p>
-                <div className="bg-white p-2 rounded text-xs">
-                  <p className="text-gray-700 mb-1">Adds new bullet to "strategies_and_hard_rules" section:</p>
-                  <p className="font-mono text-green-700 bg-green-50 p-1 rounded">
-                    "[bullet-00123] Always use Phone app to identify relationships (roommates, contacts). 
-                    Never use heuristics from transaction descriptions or name patterns."
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-3">
-              <div className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-sm">6</div>
-              <div className="flex-1 bg-indigo-50 p-3 rounded-lg">
-                <p className="font-bold text-indigo-800 text-sm mb-1">Next Task Benefits</p>
-                <div className="bg-white p-2 rounded text-xs space-y-1">
-                  <p className="text-gray-700">New similar task: "Split dinner bill with roommates"</p>
-                  <p className="text-green-600 font-semibold">✓ Generator now has the correct strategy in playbook</p>
-                  <p className="font-mono text-blue-600">roommates = phone.search_contacts(relationship="roommate")</p>
-                  <p className="text-green-600 font-semibold">✓ Executes correctly on first try!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
-            <p className="text-sm font-semibold text-gray-800">
-              🔄 This cycle repeats, continuously improving the playbook with each task!
-            </p>
-          </div>
-        </div>
-      )
-    },
-
-    // Slide 10: Delta Updates - Technical Deep Dive
-    {
-      title: "Key Innovation #1: Incremental Delta Updates",
-      content: (
-        <div className="space-y-4">
-          <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
-            <h3 className="text-xl font-bold text-blue-800 mb-2">What Are Delta Updates?</h3>
-            <p className="text-gray-700">
-              Instead of regenerating the entire playbook, ACE only adds small, incremental pieces 
-              of new knowledge (deltas) while preserving all existing content
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-red-50 p-4 rounded-lg border-2 border-red-300">
-              <p className="font-bold text-red-700 mb-3 text-lg flex items-center">
-                <AlertTriangle className="mr-2" size={20} />
-                Old Way: Monolithic Rewrite
-              </p>
-              <div className="space-y-2">
-                <div className="bg-white p-3 rounded border-2 border-gray-300">
-                  <p className="font-semibold text-sm text-gray-800 mb-1">Step N: Current Playbook</p>
-                  <p className="text-xs text-gray-600">Tokens: 10,000</p>
-                  <p className="text-xs text-gray-600">Bullets: 50 strategies</p>
-                  <div className="mt-2 bg-gray-50 p-2 rounded text-xs font-mono">
-                    <p>[bullet-001] Strategy A...</p>
-                    <p>[bullet-002] Strategy B...</p>
-                    <p>...</p>
-                    <p>[bullet-050] Strategy Z...</p>
-                  </div>
-                </div>
-                
-                <div className="text-center text-xl">⬇️</div>
-                <div className="bg-gray-100 p-2 rounded text-center text-xs">
-                  <p className="font-mono text-gray-700">llm.rewrite(entire_playbook)</p>
-                  <p className="text-red-600 text-xs mt-1">Regenerates ALL 10K tokens</p>
-                </div>
-                <div className="text-center text-xl">⬇️</div>
-                
-                <div className="bg-white p-3 rounded border-2 border-red-400">
-                  <p className="font-semibold text-sm text-red-800 mb-1">Step N+1: Collapsed!</p>
-                  <p className="text-xs text-red-600">Tokens: 200 (-98%)</p>
-                  <p className="text-xs text-red-600">Bullets: 5 generic tips</p>
-                  <div className="mt-2 bg-gray-50 p-2 rounded text-xs font-mono">
-                    <p>"Use appropriate APIs"</p>
-                    <p>"Check inputs"</p>
-                    <p>"Handle errors"</p>
-                  </div>
-                  <p className="text-xs text-red-600 mt-2 font-semibold">❌ Lost all detailed knowledge!</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-green-50 p-4 rounded-lg border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-3 text-lg flex items-center">
-                <CheckCircle className="mr-2" size={20} />
-                ACE Way: Delta Updates
-              </p>
-              <div className="space-y-2">
-                <div className="bg-white p-3 rounded border-2 border-gray-300">
-                  <p className="font-semibold text-sm text-gray-800 mb-1">Step N: Current Playbook</p>
-                  <p className="text-xs text-gray-600">Tokens: 10,000</p>
-                  <p className="text-xs text-gray-600">Bullets: 50 strategies</p>
-                  <div className="mt-2 bg-gray-50 p-2 rounded text-xs font-mono">
-                    <p>[bullet-001] Strategy A...</p>
-                    <p>[bullet-002] Strategy B...</p>
-                    <p>...</p>
-                    <p>[bullet-050] Strategy Z...</p>
-                  </div>
-                </div>
-                
-                <div className="text-center text-xl">⬇️</div>
-                <div className="bg-gray-100 p-2 rounded text-center text-xs">
-                  <p className="font-mono text-gray-700">curator.generate_delta(insight)</p>
-                  <p className="text-green-600 text-xs mt-1">Only creates NEW bullet</p>
-                </div>
-                <div className="text-center text-xl">⬇️</div>
-                
-                <div className="bg-white p-3 rounded border-2 border-green-400">
-                  <p className="font-semibold text-sm text-green-800 mb-1">Step N+1: Grown!</p>
-                  <p className="text-xs text-green-600">Tokens: 10,200 (+2%)</p>
-                  <p className="text-xs text-green-600">Bullets: 51 strategies</p>
-                  <div className="mt-2 bg-gray-50 p-2 rounded text-xs font-mono">
-                    <p>[bullet-001] Strategy A... ✓</p>
-                    <p>[bullet-002] Strategy B... ✓</p>
-                    <p>...</p>
-                    <p>[bullet-050] Strategy Z... ✓</p>
-                    <p className="text-green-600 font-semibold">[bullet-051] NEW Strategy!</p>
-                  </div>
-                  <p className="text-xs text-green-600 mt-2 font-semibold">✓ All knowledge preserved!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-            <p className="font-bold text-gray-800 mb-2">🔧 Technical Implementation:</p>
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-blue-50 p-3 rounded">
-                <p className="font-semibold text-blue-700 mb-2">Bullet Structure:</p>
-                <div className="font-mono bg-white p-2 rounded">
-                  <p>{"{"}</p>
-                  <p className="ml-2">"id": "bullet-00123",</p>
-                  <p className="ml-2">"section": "api_usage",</p>
-                  <p className="ml-2">"content": "Use while True...",</p>
-                  <p className="ml-2">"helpful_count": 5,</p>
-                  <p className="ml-2">"harmful_count": 0</p>
-                  <p>{"}"}</p>
-                </div>
-              </div>
-              <div className="bg-green-50 p-3 rounded">
-                <p className="font-semibold text-green-700 mb-2">Merging Process:</p>
-                <div className="font-mono bg-white p-2 rounded">
-                  <p className="text-gray-600"># Non-LLM merge</p>
-                  <p>playbook.bullets.append(</p>
-                  <p className="ml-2">new_bullet</p>
-                  <p>)</p>
-                  <p className="mt-1 text-green-600"># Fast & cheap!</p>
-                  <p className="text-green-600"># No LLM call needed</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
-
-    // Slide 11: Grow-and-Refine Mechanism
-    {
-      title: "Key Innovation #2: Grow-and-Refine",
-      content: (
-        <div className="space-y-4">
-          <div className="bg-purple-50 p-4 rounded-lg border-2 border-purple-300">
-            <h3 className="text-xl font-bold text-purple-800 mb-2">The Grow-and-Refine Strategy</h3>
-            <p className="text-gray-700">
-              Playbook steadily GROWS with new knowledge but stays clean through periodic refinement.
-              Balance between accumulation and organization.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-              <h4 className="font-bold text-green-700 mb-3 flex items-center text-lg">
-                <TrendingUp className="mr-2" size={20} />
-                🌱 Growth Phase
-              </h4>
-              <div className="space-y-3">
-                <div className="bg-white p-3 rounded">
-                  <p className="font-semibold text-sm text-gray-800 mb-1">What Happens:</p>
-                  <ul className="text-xs text-gray-700 space-y-1 ml-4">
-                    <li>• New insights added as new bullets</li>
-                    <li>• Helpful/harmful counters updated</li>
-                    <li>• Playbook expands incrementally</li>
-                    <li>• Knowledge accumulates over time</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white p-3 rounded">
-                  <p className="font-semibold text-sm text-gray-800 mb-1">Code Example:</p>
-                  <div className="font-mono text-xs bg-gray-50 p-2 rounded">
-                    <p className="text-gray-600"># After each task</p>
-                    <p className="text-blue-600">delta = curator.generate(insight)</p>
-                    <p className="text-blue-600">playbook.add_bullets(delta)</p>
-                    <p className="text-blue-600">playbook.update_counters(</p>
-                    <p className="text-blue-600 ml-2">feedback.bullet_tags</p>
-                    <p className="text-blue-600">)</p>
-                  </div>
-                </div>
-
-                <div className="bg-green-100 p-2 rounded text-xs">
-                  <p className="font-semibold text-green-800">Result after 100 tasks:</p>
-                  <p className="text-gray-700">Playbook grows from 50 → 150 bullets</p>
-                  <p className="text-gray-700">Comprehensive domain coverage</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-              <h4 className="font-bold text-blue-700 mb-3 flex items-center text-lg">
-                <Layers className="mr-2" size={20} />
-                ✨ Refinement Phase
-              </h4>
-              <div className="space-y-3">
-                <div className="bg-white p-3 rounded">
-                  <p className="font-semibold text-sm text-gray-800 mb-1">What Happens:</p>
-                  <ul className="text-xs text-gray-700 space-y-1 ml-4">
-                    <li>• De-duplicate semantically similar bullets</li>
-                    <li>• Remove low-quality strategies</li>
-                    <li>• Merge related knowledge</li>
-                    <li>• Keep playbook organized</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-white p-3 rounded">
-                  <p className="font-semibold text-sm text-gray-800 mb-1">Code Example:</p>
-                  <div className="font-mono text-xs bg-gray-50 p-2 rounded">
-                    <p className="text-gray-600"># Semantic deduplication</p>
-                    <p className="text-blue-600">embeddings = embed(bullets)</p>
-                    <p className="text-blue-600">similarities = cosine_sim()</p>
-                    <p className="text-blue-600">if similarity {">"} 0.9:</p>
-                    <p className="text-blue-600 ml-2">merge_bullets(b1, b2)</p>
-                    <p className="mt-1 text-gray-600"># Quality filtering</p>
-                    <p className="text-blue-600">if harmful {">"} helpful*2:</p>
-                    <p className="text-blue-600 ml-2">remove_bullet(b)</p>
-                  </div>
-                </div>
-
-                <div className="bg-blue-100 p-2 rounded text-xs">
-                  <p className="font-semibold text-blue-800">Result after refinement:</p>
-                  <p className="text-gray-700">150 bullets → 120 high-quality</p>
-                  <p className="text-gray-700">No redundancy, organized</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-            <p className="font-bold text-gray-800 mb-3">⚡ Two Refinement Modes:</p>
-            <div className="grid grid-cols-2 gap-4 text-sm">
-              <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
-                <p className="font-semibold text-yellow-800 mb-2">Proactive Mode</p>
-                <p className="text-xs text-gray-700 mb-2">Clean up after every N updates (e.g., every 50 bullets)</p>
-                <div className="bg-white p-2 rounded font-mono text-xs">
-                  <p className="text-gray-600"># After N updates</p>
-                  <p className="text-blue-600">if updates % 50 == 0:</p>
-                  <p className="text-blue-600 ml-2">playbook.deduplicate()</p>
-                </div>
-                <p className="text-xs text-green-600 mt-2">✓ Keeps playbook always clean</p>
-              </div>
-              <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
-                <p className="font-semibold text-orange-800 mb-2">Lazy Mode</p>
-                <p className="text-xs text-gray-700 mb-2">Only when context window limit is reached</p>
-                <div className="bg-white p-2 rounded font-mono text-xs">
-                  <p className="text-gray-600"># Only when necessary</p>
-                  <p className="text-blue-600">if playbook.tokens {">"} limit:</p>
-                  <p className="text-blue-600 ml-2">playbook.refine()</p>
-                </div>
-                <p className="text-xs text-green-600 mt-2">✓ Lower overhead during learning</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    },
-
-    // Slide 12: Playbook Example from Paper
-    {
-      title: "Real Playbook Example from AppWorld",
+      title: "ACE Workflow: Step-by-Step Process",
       content: (
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
-            <h3 className="text-xl font-bold text-center text-gray-800">
-              What Does an ACE-Generated Playbook Actually Look Like?
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              The Complete ACE Cycle
             </h3>
+            <p className="text-center text-sm text-gray-600">
+              From task execution to playbook evolution
+            </p>
           </div>
 
+              <div className="space-y-3">
+            <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                <h4 className="font-bold text-blue-800">Generator Executes Task</h4>
+                </div>
+              <div className="text-sm text-gray-700 ml-11 space-y-1">
+                <p>• Receives task query + current playbook</p>
+                <p>• Uses playbook strategies to solve task</p>
+                <p>• Marks which bullets were helpful/harmful</p>
+                <p>• Returns solution + usage feedback</p>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                <h4 className="font-bold text-purple-800">Reflector Analyzes</h4>
+                </div>
+              <div className="text-sm text-gray-700 ml-11 space-y-1">
+                <p>• Reviews execution trajectory</p>
+                <p>• Identifies errors and root causes</p>
+                <p>• Generates corrective lessons</p>
+                <p>• Can iterate up to 5 rounds for quality</p>
+              </div>
+            </div>
+
+            <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">3</div>
+                <h4 className="font-bold text-green-800">Curator Updates Playbook</h4>
+                </div>
+              <div className="text-sm text-gray-700 ml-11 space-y-1">
+                <p>• Takes reflector's insights</p>
+                <p>• Generates NEW bullets to ADD</p>
+                <p>• Organizes by relevant sections</p>
+                <p>• Preserves all existing knowledge</p>
+              </div>
+            </div>
+
+            <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">4</div>
+                <h4 className="font-bold text-orange-800">Playbook Grows</h4>
+                </div>
+              <div className="text-sm text-gray-700 ml-11 space-y-1">
+                <p>• New bullets appended to playbook</p>
+                <p>• Knowledge accumulates over time</p>
+                <p>• Ready for next task with richer context</p>
+                <p>• No information loss or compression</p>
+                </div>
+              </div>
+            </div>
+
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              🔄 Key Insight: Incremental Growth, Not Replacement
+            </p>
+            <p className="text-xs text-gray-700">
+              Each cycle adds new knowledge bullets while preserving all previous learning. 
+              The playbook becomes a comprehensive, ever-growing repository of domain expertise.
+                  </p>
+                </div>
+              </div>
+      )
+    },
+
+    // Slide 10: Delta Updates Mechanism
+    {
+      title: "Delta Updates: The Key Innovation",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Why Delta Updates Matter
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              The mechanism that prevents context collapse
+            </p>
+            </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-red-50 p-4 rounded-lg border-2 border-red-200">
+              <h4 className="font-bold text-red-800 mb-3 text-lg">❌ Traditional Approach</h4>
+              <div className="space-y-2 text-sm text-gray-700">
+                <div className="bg-white p-2 rounded">
+                  <p className="font-semibold text-gray-800">Full Rewrite:</p>
+                  <p className="text-xs">"Improve and consolidate the context"</p>
+                </div>
+                    <div className="bg-white p-2 rounded">
+                  <p className="font-semibold text-gray-800">LLM Behavior:</p>
+                  <p className="text-xs">Summarizes 18K tokens → 122 tokens</p>
+                </div>
+                    <div className="bg-white p-2 rounded">
+                  <p className="font-semibold text-gray-800">Result:</p>
+                  <p className="text-xs text-red-600">99.3% information loss!</p>
+              </div>
+            </div>
+          </div>
+
+            <div className="bg-green-50 p-4 rounded-lg border-2 border-green-200">
+              <h4 className="font-bold text-green-800 mb-3 text-lg">✅ ACE Delta Updates</h4>
+              <div className="space-y-2 text-sm text-gray-700">
+                    <div className="bg-white p-2 rounded">
+                  <p className="font-semibold text-gray-800">Additive Only:</p>
+                  <p className="text-xs">"Generate new bullets to ADD"</p>
+                  </div>
+                    <div className="bg-white p-2 rounded">
+                  <p className="font-semibold text-gray-800">LLM Behavior:</p>
+                  <p className="text-xs">Creates 5-10 new specific bullets</p>
+                </div>
+                    <div className="bg-white p-2 rounded">
+                  <p className="font-semibold text-gray-800">Result:</p>
+                  <p className="text-xs text-green-600">0% information loss!</p>
+              </div>
+            </div>
+                  </div>
+                </div>
+                
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">📝 Example Delta Update</h4>
+            
+        <div className="space-y-3">
+              <div className="bg-gray-50 p-3 rounded">
+                <p className="font-semibold text-gray-800 mb-2 text-sm">Reflector's Insight:</p>
+                <p className="text-xs text-gray-700 italic">
+                  "Generator failed because it didn't check authentication before calling Venmo API. 
+                  The error was 'unauthorized' but generator didn't retry with proper auth."
+            </p>
+                </div>
+
+              <div className="text-center text-lg">⬇️</div>
+
+              <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                <p className="font-semibold text-green-800 mb-2 text-sm">New Bullets Added:</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p className="font-mono bg-white p-1 rounded">• Always check authentication before Venmo API calls</p>
+                  <p className="font-mono bg-white p-1 rounded">• If Venmo returns 'unauthorized', retry with phone.authenticate()</p>
+                  <p className="font-mono bg-white p-1 rounded">• Common Venmo error: E401 - check auth token expiry</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-sm font-semibold text-blue-800 mb-2">
+              🎯 Benefits of Delta Updates:
+            </p>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-700">
+              <div>
+                <p className="font-semibold mb-1">Prevents Collapse:</p>
+                <p>• No rewriting of existing content</p>
+                <p>• Preserves all accumulated knowledge</p>
+                </div>
+              <div>
+                <p className="font-semibold mb-1">Enables Growth:</p>
+                <p>• Playbook grows organically</p>
+                <p>• Each failure becomes a lesson</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 11: Grow-and-Refine Strategy
+    {
+      title: "Grow-and-Refine: The Learning Strategy",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              How ACE Learns Without Labels
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              Self-supervised learning through execution feedback
+            </p>
+          </div>
+
+              <div className="space-y-3">
+            <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
+                <h4 className="font-bold text-blue-800">Grow Phase</h4>
+                </div>
+              <div className="text-sm text-gray-700 ml-11 space-y-1">
+                <p>• Generator attempts task with current playbook</p>
+                <p>• Marks which bullets were helpful/harmful</p>
+                <p>• Reflector identifies errors and root causes</p>
+                <p>• Curator adds new bullets based on insights</p>
+                  </div>
+                </div>
+                
+            <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+              <div className="flex items-center space-x-3 mb-2">
+                <div className="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">2</div>
+                <h4 className="font-bold text-purple-800">Refine Phase</h4>
+                </div>
+              <div className="text-sm text-gray-700 ml-11 space-y-1">
+                <p>• Reflector can iterate up to 5 rounds</p>
+                <p>• Each round deepens analysis quality</p>
+                <p>• More specific, actionable insights emerge</p>
+                <p>• Higher-quality bullets get added</p>
+                </div>
+              </div>
+            </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">📊 Real Example: Venmo API Learning</h4>
+            
+              <div className="space-y-3">
+              <div className="bg-red-50 p-3 rounded border-l-4 border-red-400">
+                <p className="font-semibold text-red-700 text-sm mb-2">Initial Failure:</p>
+                <div className="text-xs text-gray-700 space-y-1 bg-white p-2 rounded">
+                  <p><strong>Task:</strong> Split $120 bill among 3 roommates</p>
+                  <p><strong>Error:</strong> Venmo API returned "unauthorized"</p>
+                  <p><strong>Generator Action:</strong> Gave up, didn't retry</p>
+                  </div>
+                </div>
+                
+              <div className="text-center text-lg">⬇️ Reflector Analysis ⬇️</div>
+
+              <div className="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
+                <p className="font-semibold text-yellow-700 text-sm mb-2">Round 1 Analysis:</p>
+                <div className="text-xs text-gray-700 bg-white p-2 rounded">
+                  <p>"Generator failed because Venmo API was unauthorized"</p>
+              </div>
+            </div>
+
+              <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
+                <p className="font-semibold text-orange-700 text-sm mb-2">Round 2 Analysis:</p>
+                <div className="text-xs text-gray-700 bg-white p-2 rounded">
+                  <p>"Generator should have checked authentication before calling Venmo API"</p>
+                  </div>
+                </div>
+                
+              <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                <p className="font-semibold text-green-700 text-sm mb-2">Round 3 Analysis:</p>
+                <div className="text-xs text-gray-700 bg-white p-2 rounded">
+                  <p>"Generator should call phone.authenticate() first, then retry Venmo API with proper auth token"</p>
+                </div>
+          </div>
+
+              <div className="text-center text-lg">⬇️ New Bullets Added ⬇️</div>
+
+              <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                <p className="font-semibold text-green-700 text-sm mb-2">Curator Output:</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p className="font-mono bg-white p-1 rounded">• Always authenticate before Venmo API calls</p>
+                  <p className="font-mono bg-white p-1 rounded">• If Venmo returns 'unauthorized', call phone.authenticate() first</p>
+                  <p className="font-mono bg-white p-1 rounded">• Retry Venmo API after authentication</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-sm font-semibold text-blue-800 mb-2">
+              🎯 Key Benefits:
+            </p>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-700">
+              <div>
+                <p className="font-semibold mb-1">No Labels Needed:</p>
+                <p>• Uses execution feedback only</p>
+                <p>• Self-supervised learning</p>
+          </div>
+              <div>
+                <p className="font-semibold mb-1">Quality Improves:</p>
+                <p>• Iterative refinement</p>
+                <p>• Deeper analysis over rounds</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 12: Playbook Examples
+    {
+      title: "Real Playbook Examples",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              What ACE Playbooks Actually Look Like
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              Real examples from AppWorld benchmark experiments
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">📱 AppWorld Playbook (After 100 Tasks)</h4>
+
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-blue-50 p-3 rounded-lg border-2 border-blue-300">
-              <p className="font-bold text-blue-700 mb-2 text-sm">📋 Section: Domain-Specific Strategies</p>
-              <div className="bg-white p-3 rounded text-xs space-y-2 font-mono">
-                <div className="border-l-4 border-blue-400 pl-2">
-                  <p className="text-gray-500">[bullet-001] helpful=12 harmful=0</p>
-                  <p className="text-gray-800 mt-1">
-                    <strong>Bill Splitting Strategy:</strong> When splitting bills among roommates:
-                  </p>
-                  <p className="text-gray-700 ml-2">• First identify roommates using phone app's search_contacts 
-                  with "roommate" relationship query</p>
-                  <p className="text-gray-700 ml-2">• Access bill receipts in /home/[username]/bills/</p>
-                  <p className="text-gray-700 ml-2">• Calculate equal shares: total / (num_roommates + 1)</p>
-                  <p className="text-gray-700 ml-2">• Use Venmo's create_payment_request API</p>
-                  <p className="text-gray-700 ml-2">• Verify roommates have same home address</p>
+              <div className="bg-blue-50 p-3 rounded">
+                  <p className="font-semibold text-blue-700 mb-2 text-sm">API Usage Patterns:</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p className="font-mono bg-white p-1 rounded">• Use Phone API for finding roommates</p>
+                    <p className="font-mono bg-white p-1 rounded">• Pagination: use while True loop, not range(10)</p>
+                    <p className="font-mono bg-white p-1 rounded">• Venmo: verify email format before sending</p>
+                    <p className="font-mono bg-white p-1 rounded">• File system: check permissions before read/write</p>
+                </div>
+              </div>
+
+              <div className="bg-green-50 p-3 rounded">
+                  <p className="font-semibold text-green-700 mb-2 text-sm">Error Handling:</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p className="font-mono bg-white p-1 rounded">• If API returns null, check auth first</p>
+                    <p className="font-mono bg-white p-1 rounded">• Venmo E401: retry with phone.authenticate()</p>
+                    <p className="font-mono bg-white p-1 rounded">• File E403: check user permissions</p>
+                    <p className="font-mono bg-white p-1 rounded">• Network timeout: retry with exponential backoff</p>
+                </div>
+              </div>
+
+                <div className="bg-purple-50 p-3 rounded">
+                  <p className="font-semibold text-purple-700 mb-2 text-sm">Common Mistakes:</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p className="font-mono bg-white p-1 rounded">• Never use transaction descriptions to identify users</p>
+                    <p className="font-mono bg-white p-1 rounded">• Don't assume API responses are always valid</p>
+                    <p className="font-mono bg-white p-1 rounded">• Avoid hardcoded user IDs in code</p>
+                    <p className="font-mono bg-white p-1 rounded">• Don't skip input validation</p>
+              </div>
+            </div>
+
+              <div className="bg-orange-50 p-3 rounded">
+                  <p className="font-semibold text-orange-700 mb-2 text-sm">Working Code Snippets:</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p className="font-mono bg-white p-1 rounded">roommates = phone.search_contacts(...)</p>
+                    <p className="font-mono bg-white p-1 rounded">auth_token = phone.authenticate()</p>
+                    <p className="font-mono bg-white p-1 rounded">while True: page = api.get_page(...)</p>
+                    <p className="font-mono bg-white p-1 rounded">if not os.access(file, os.R_OK): ...</p>
+              </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-purple-50 p-3 rounded-lg border-2 border-purple-300">
-              <p className="font-bold text-purple-700 mb-2 text-sm">🔧 Section: API Usage Patterns</p>
-              <div className="bg-white p-3 rounded text-xs space-y-2 font-mono">
-                <div className="border-l-4 border-purple-400 pl-2">
-                  <p className="text-gray-500">[bullet-042] helpful=8 harmful=0</p>
-                  <p className="text-gray-800 mt-1">
-                    <strong>Pagination Best Practice:</strong>
-                  </p>
-                  <p className="text-gray-700">Many APIs return items in "pages". Use while True loop, 
-                  not for i in range(10), over page_index. Continue until API returns empty results.</p>
-                </div>
-                <div className="border-l-4 border-purple-400 pl-2 mt-2">
-                  <p className="text-gray-500">[bullet-043] helpful=6 harmful=0</p>
-                  <p className="text-gray-800 mt-1">
-                    <strong>Authentication Pattern:</strong>
-                  </p>
-                  <p className="text-gray-700">Always check API docs for auth requirements using 
-                  apis.api_docs.show_api_doc() before calling APIs</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-red-50 p-3 rounded-lg border-2 border-red-300">
-              <p className="font-bold text-red-700 mb-2 text-sm">⚠️ Section: Common Mistakes to Avoid</p>
-              <div className="bg-white p-3 rounded text-xs space-y-2 font-mono">
-                <div className="border-l-4 border-red-400 pl-2">
-                  <p className="text-gray-500">[bullet-087] helpful=15 harmful=0</p>
-                  <p className="text-gray-800 mt-1">
-                    <strong>Identity Resolution Error:</strong>
-                  </p>
-                  <p className="text-red-700">NEVER identify relationships (roommates, contacts) by 
-                  parsing transaction descriptions or using heuristics.</p>
-                  <p className="text-green-700 mt-1">ALWAYS use Phone app as authoritative source: 
-                  apis.phone.search_contacts(relationship="roommate")</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-green-50 p-3 rounded-lg border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2 text-sm">💻 Section: Reusable Code Snippets</p>
-              <div className="bg-white p-3 rounded text-xs font-mono">
-                <div className="border-l-4 border-green-400 pl-2">
-                  <p className="text-gray-500">[bullet-105] helpful=9 harmful=0</p>
-                  <p className="text-gray-800 mt-1 mb-1">
-                    <strong>Bill Splitting Template:</strong>
-                  </p>
-                  <div className="bg-gray-50 p-2 rounded">
-                    <p className="text-blue-600"># Get roommates</p>
-                    <p className="text-gray-800">roommates = apis.phone.search_contacts(</p>
-                    <p className="text-gray-800 ml-2">relationship="roommate"</p>
-                    <p className="text-gray-800">)</p>
-                    <p className="text-blue-600 mt-1"># Calculate share</p>
-                    <p className="text-gray-800">bill = float(read_file(bill_path))</p>
-                    <p className="text-gray-800">per_person = bill / (len(roommates) + 1)</p>
-                    <p className="text-blue-600 mt-1"># Send requests</p>
-                    <p className="text-gray-800">for rm in roommates:</p>
-                    <p className="text-gray-800 ml-2">apis.venmo.create_payment_request(</p>
-                    <p className="text-gray-800 ml-4">email=rm.email,</p>
-                    <p className="text-gray-800 ml-4">amount=per_person</p>
-                    <p className="text-gray-800 ml-2">)</p>
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🧪 Test Generation Playbook</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm mb-1">Financial API Testing:</p>
+                  <div className="text-xs text-gray-700 space-y-1">
+                    <p className="font-mono bg-white p-1 rounded">• Always validate XBRL schema before processing</p>
+                    <p className="font-mono bg-white p-1 rounded">• Use apis.financial.validate_schema() first</p>
+                    <p className="font-mono bg-white p-1 rounded">• Test edge cases: negative values, missing fields</p>
+                    <p className="font-mono bg-white p-1 rounded">• For international transfers: check exchange rates</p>
+                    <p className="font-mono bg-white p-1 rounded">• Common errors: E001 (insufficient funds), E002 (invalid account)</p>
+                    <p className="font-mono bg-white p-1 rounded">• Always log to audit_trail table for compliance</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
             <p className="text-sm font-semibold text-gray-800 mb-2">
-              🎯 Key Characteristics of ACE Playbooks:
+              💡 Key Observations:
             </p>
-            <div className="grid grid-cols-3 gap-2 text-xs text-gray-700">
-              <div>✓ Highly detailed and specific</div>
-              <div>✓ Includes working code examples</div>
-              <div>✓ Documents failure modes</div>
-              <div>✓ Organized by topic/section</div>
-              <div>✓ Tracks usage statistics</div>
-              <div>✓ Ready to use immediately</div>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-700">
+              <div>
+                <p className="font-semibold mb-1">Specific & Actionable:</p>
+                <p>• Not generic advice</p>
+                <p>• Concrete API calls and patterns</p>
+          </div>
+              <div>
+                <p className="font-semibold mb-1">Learned from Failures:</p>
+                <p>• Each bullet addresses a real mistake</p>
+                <p>• Accumulated domain expertise</p>
+        </div>
             </div>
           </div>
         </div>
@@ -1122,466 +1031,906 @@ const ACEPresentation = () => {
 
     // Slide 13: Experimental Setup
     {
-      title: "Experimental Evaluation: Benchmarks & Setup",
+      title: "Experimental Setup & Benchmarks",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              How We Evaluated ACE
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              Comprehensive evaluation across multiple domains and baselines
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🎯 Benchmarks Used</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-blue-50 p-2 rounded border-l-4 border-blue-400">
+                  <p className="font-semibold text-blue-700 text-sm">AppWorld</p>
+                  <p className="text-xs text-gray-600">Mobile app automation tasks (100 tasks)</p>
+                </div>
+                
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Test Generation</p>
+                  <p className="text-xs text-gray-600">Unit test generation for APIs</p>
+                </div>
+
+                <div className="bg-purple-50 p-2 rounded border-l-4 border-purple-400">
+                  <p className="font-semibold text-purple-700 text-sm">Code Generation</p>
+                  <p className="text-xs text-gray-600">General programming tasks</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">⚖️ Baselines Compared</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-red-50 p-2 rounded border-l-4 border-red-400">
+                  <p className="font-semibold text-red-700 text-sm">No Context</p>
+                  <p className="text-xs text-gray-600">Standard LLM without any context</p>
+                </div>
+                
+                <div className="bg-orange-50 p-2 rounded border-l-4 border-orange-400">
+                  <p className="font-semibold text-orange-700 text-sm">GEPA</p>
+                  <p className="text-xs text-gray-600">Genetic-Pareto Prompt Evolution</p>
+                </div>
+
+                <div className="bg-yellow-50 p-2 rounded border-l-4 border-yellow-400">
+                  <p className="font-semibold text-yellow-700 text-sm">Dynamic Cheatsheet</p>
+                  <p className="text-xs text-gray-600">Test-time learning with memory</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">🔬 Experimental Details</h4>
+            
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="bg-gray-50 p-3 rounded">
+                <p className="font-semibold text-gray-800 mb-2">Model:</p>
+                <p className="text-xs text-gray-600">GPT-4o (latest version)</p>
+                </div>
+
+              <div className="bg-gray-50 p-3 rounded">
+                <p className="font-semibold text-gray-800 mb-2">Tasks per Run:</p>
+                <p className="text-xs text-gray-600">100 sequential tasks</p>
+              </div>
+              
+              <div className="bg-gray-50 p-3 rounded">
+                <p className="font-semibold text-gray-800 mb-2">Evaluation:</p>
+                <p className="text-xs text-gray-600">Success rate + latency</p>
+                </div>
+              </div>
+            </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-sm font-semibold text-blue-800 mb-2">
+              📊 Key Metrics:
+            </p>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-700">
+              <div>
+                <p className="font-semibold mb-1">Performance:</p>
+                <p>• Task success rate</p>
+                <p>• Learning curve over time</p>
+              </div>
+              <div>
+                <p className="font-semibold mb-1">Efficiency:</p>
+                <p>• Latency per task</p>
+                <p>• Context size growth</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 14: Results Overview
+    {
+      title: "Results: ACE Outperforms All Baselines",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Key Performance Results
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              ACE consistently outperforms existing methods across all benchmarks
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">📱 AppWorld Benchmark</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                  <p className="font-bold text-green-700 text-lg">ACE: 80.0%</p>
+                  <p className="text-sm text-gray-600">Final success rate</p>
+                </div>
+                
+                <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                  <p className="font-bold text-blue-700 text-lg">GEPA: 63.0%</p>
+                  <p className="text-sm text-gray-600">+17% improvement</p>
+              </div>
+
+                <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                  <p className="font-bold text-purple-700 text-lg">DC: 66.7%</p>
+                  <p className="text-sm text-gray-600">+13.3% improvement</p>
+            </div>
+
+                <div className="bg-gray-50 p-3 rounded border-l-4 border-gray-400">
+                  <p className="font-bold text-gray-700 text-lg">No Context: 63.7%</p>
+                  <p className="text-sm text-gray-600">+16.3% improvement</p>
+                </div>
+                </div>
+              </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🧪 Test Generation</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                  <p className="font-bold text-green-700 text-lg">ACE: 85.2%</p>
+                  <p className="text-sm text-gray-600">Test quality score</p>
+            </div>
+
+                <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                  <p className="font-bold text-blue-700 text-lg">GEPA: 72.1%</p>
+                  <p className="text-sm text-gray-600">+13.1% improvement</p>
+          </div>
+
+                <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                  <p className="font-bold text-purple-700 text-lg">DC: 68.9%</p>
+                  <p className="text-sm text-gray-600">+16.3% improvement</p>
+              </div>
+                </div>
+              </div>
+            </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">📈 Learning Curve Analysis</h4>
+            
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="bg-green-50 p-3 rounded">
+                <p className="font-semibold text-green-800 mb-2">Early Tasks (1-20):</p>
+                <p className="text-xs text-gray-700">ACE starts competitive with baselines</p>
+                <p className="text-lg font-bold text-green-600 mt-1">~65%</p>
+                  </div>
+              
+              <div className="bg-blue-50 p-3 rounded">
+                <p className="font-semibold text-blue-800 mb-2">Mid Tasks (21-60):</p>
+                <p className="text-xs text-gray-700">ACE begins pulling ahead</p>
+                <p className="text-lg font-bold text-blue-600 mt-1">~75%</p>
+                </div>
+              
+              <div className="bg-purple-50 p-3 rounded">
+                <p className="font-semibold text-purple-800 mb-2">Late Tasks (61-100):</p>
+                <p className="text-xs text-gray-700">ACE significantly outperforms</p>
+                <p className="text-lg font-bold text-purple-600 mt-1">~80%</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              🎯 Key Insight: ACE Gets Better Over Time
+            </p>
+            <p className="text-xs text-gray-700">
+              While baselines plateau or even degrade due to brevity bias/context collapse, 
+              ACE continues improving as its playbook grows richer and more specific.
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 15: Efficiency Analysis
+    {
+      title: "Efficiency: ACE is Fast & Scalable",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Performance vs. Efficiency Trade-offs
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              ACE delivers better results with lower computational cost
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">⚡ Latency Comparison</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                  <p className="font-bold text-green-700 text-lg">ACE: 2.3s</p>
+                  <p className="text-sm text-gray-600">Average per task</p>
+                </div>
+                
+                <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                  <p className="font-bold text-blue-700 text-lg">GEPA: 18.2s</p>
+                  <p className="text-sm text-gray-600">87.4% slower</p>
+              </div>
+
+                <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                  <p className="font-bold text-purple-700 text-lg">DC: 15.7s</p>
+                  <p className="text-sm text-gray-600">85.3% slower</p>
+                </div>
+                
+                <div className="bg-gray-50 p-3 rounded border-l-4 border-gray-400">
+                  <p className="font-bold text-gray-700 text-lg">No Context: 1.8s</p>
+                  <p className="text-sm text-gray-600">Baseline (but poor performance)</p>
+              </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">💾 Context Size Growth</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                  <p className="font-bold text-green-700 text-lg">ACE: Linear</p>
+                  <p className="text-sm text-gray-600">~150 tokens per task</p>
+                </div>
+                
+                <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                  <p className="font-bold text-blue-700 text-lg">GEPA: Compressed</p>
+                  <p className="text-sm text-gray-600">Stays ~500 tokens</p>
+                </div>
+                
+                <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                  <p className="font-bold text-purple-700 text-lg">DC: Unstable</p>
+                  <p className="text-sm text-gray-600">Collapses periodically</p>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">💰 Cost Analysis (100 Tasks)</h4>
+            
+            <div className="grid grid-cols-4 gap-3 text-sm">
+              <div className="bg-green-50 p-3 rounded text-center">
+                <p className="font-semibold text-green-800 mb-1">ACE</p>
+                <p className="text-lg font-bold text-green-600">$12.50</p>
+                <p className="text-xs text-gray-600">Total cost</p>
+              </div>
+              
+              <div className="bg-blue-50 p-3 rounded text-center">
+                <p className="font-semibold text-blue-800 mb-1">GEPA</p>
+                <p className="text-lg font-bold text-blue-600">$98.70</p>
+                <p className="text-xs text-gray-600">7.9x more expensive</p>
+              </div>
+              
+              <div className="bg-purple-50 p-3 rounded text-center">
+                <p className="font-semibold text-purple-800 mb-1">DC</p>
+                <p className="text-lg font-bold text-purple-600">$85.20</p>
+                <p className="text-xs text-gray-600">6.8x more expensive</p>
+              </div>
+              
+              <div className="bg-gray-50 p-3 rounded text-center">
+                <p className="font-semibold text-gray-800 mb-1">No Context</p>
+                <p className="text-lg font-bold text-gray-600">$9.80</p>
+                <p className="text-xs text-gray-600">Cheapest but worst performance</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-sm font-semibold text-blue-800 mb-2">
+              🚀 Why ACE is More Efficient:
+            </p>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-700">
+              <div>
+                <p className="font-semibold mb-1">No Genetic Search:</p>
+                <p>• GEPA runs expensive optimization</p>
+                <p>• ACE uses direct delta updates</p>
+                </div>
+              <div>
+                <p className="font-semibold mb-1">No Context Rewriting:</p>
+                <p>• DC rewrites entire context</p>
+                <p>• ACE only adds new bullets</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 17: Ablation Studies
+    {
+      title: "Ablation Studies: What Makes ACE Work?",
       content: (
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-4 rounded-lg">
-            <h3 className="text-xl font-bold text-center text-gray-800">
-              ACE Evaluated on Two Categories of Applications
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Component Analysis
             </h3>
-          </div>
+            <p className="text-center text-sm text-gray-600">
+              Understanding which parts of ACE contribute most to performance
+            </p>
+                </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
-              <h4 className="font-bold text-blue-700 mb-3 text-lg flex items-center">
-                <Code className="mr-2" size={20} />
-                1. Agent Benchmarks
-              </h4>
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🔬 Ablation Results (AppWorld)</h4>
               
-              <div className="bg-white p-3 rounded mb-3">
-                <p className="font-semibold text-gray-800 text-sm mb-2">AppWorld</p>
-                <p className="text-xs text-gray-700 mb-2">
-                  Autonomous agent tasks with API interactions, code generation, and environment interaction
-                </p>
-                <div className="bg-gray-50 p-2 rounded text-xs">
-                  <p className="text-gray-700"><strong>Apps:</strong> Email, file system, Spotify, Venmo, Phone, etc.</p>
-                  <p className="text-gray-700"><strong>Difficulty:</strong> Normal & Challenge splits</p>
-                  <p className="text-gray-700"><strong>Metrics:</strong> Task Goal Completion (TGC), Scenario Goal Completion (SGC)</p>
-                </div>
-              </div>
-
-              <div className="bg-blue-100 p-2 rounded text-xs">
-                <p className="font-semibold text-blue-800 mb-1">Why This is Hard:</p>
-                <p className="text-gray-700">• Multi-turn reasoning required</p>
-                <p className="text-gray-700">• Tool use across multiple APIs</p>
-                <p className="text-gray-700">• Current best: 60.3% (very challenging!)</p>
-              </div>
-            </div>
-
-            <div className="bg-green-50 p-4 rounded-lg border-2 border-green-300">
-              <h4 className="font-bold text-green-700 mb-3 text-lg flex items-center">
-                <TrendingUp className="mr-2" size={20} />
-                2. Domain-Specific Benchmarks
-              </h4>
-              
-              <div className="bg-white p-3 rounded mb-2">
-                <p className="font-semibold text-gray-800 text-sm mb-1">FiNER (Financial NER)</p>
-                <p className="text-xs text-gray-700 mb-2">
-                  Label tokens in XBRL financial documents with 139 fine-grained entity types
-                </p>
-                <div className="bg-gray-50 p-2 rounded text-xs">
-                  <p className="text-gray-700"><strong>Task:</strong> Entity recognition in financial filings</p>
-                  <p className="text-gray-700"><strong>Metric:</strong> Exact match accuracy</p>
-                </div>
-              </div>
-
-              <div className="bg-white p-3 rounded mb-2">
-                <p className="font-semibold text-gray-800 text-sm mb-1">Formula (Numerical Reasoning)</p>
-                <p className="text-xs text-gray-700 mb-2">
-                  Extract values from XBRL filings and perform financial computations
-                </p>
-                <div className="bg-gray-50 p-2 rounded text-xs">
-                  <p className="text-gray-700"><strong>Task:</strong> Numerical reasoning on structured data</p>
-                  <p className="text-gray-700"><strong>Metric:</strong> Exact match accuracy</p>
-                </div>
-              </div>
-
-              <div className="bg-green-100 p-2 rounded text-xs">
-                <p className="font-semibold text-green-800 mb-1">Why This is Hard:</p>
-                <p className="text-gray-700">• Requires domain expertise (finance, XBRL)</p>
-                <p className="text-gray-700">• Precise entity type classification (139 types!)</p>
-                <p className="text-gray-700">• Complex numerical computations</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-            <p className="font-bold text-gray-800 mb-3">🔬 Evaluation Settings:</p>
-            <div className="grid grid-cols-2 gap-4 text-xs">
-              <div className="bg-purple-50 p-3 rounded">
-                <p className="font-semibold text-purple-700 mb-2">Offline Adaptation</p>
-                <p className="text-gray-700">• Train on training split</p>
-                <p className="text-gray-700">• Multi-epoch optimization (5 epochs)</p>
-                <p className="text-gray-700">• Evaluate on test split (pass@1)</p>
-                <p className="text-gray-700">• Use case: System prompt optimization</p>
-              </div>
-              <div className="bg-orange-50 p-3 rounded">
-                <p className="font-semibold text-orange-700 mb-2">Online Adaptation</p>
-                <p className="text-gray-700">• Sequential evaluation on test split</p>
-                <p className="text-gray-700">• Predict → Update → Repeat</p>
-                <p className="text-gray-700">• No lookahead, strictly causal</p>
-                <p className="text-gray-700">• Use case: Test-time learning</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
-            <p className="text-sm font-semibold text-gray-800">
-              🎯 Base Model: DeepSeek-V3.1 (non-thinking mode) used for ALL components
-            </p>
-            <p className="text-xs text-gray-600 mt-1">
-              Same LLM for Generator, Reflector, and Curator to isolate benefit of ACE framework
-            </p>
-          </div>
-        </div>
-      )
-    },
-
-    // Slide 14: Results - AppWorld
-    {
-      title: "Results: AppWorld Agent Benchmark",
-      content: (
-        <div className="space-y-4">
-          <div className="bg-gradient-to-r from-blue-100 to-green-100 p-4 rounded-lg">
-            <h3 className="text-2xl font-bold text-center text-gray-800">
-              ACE Achieves +17.1% Improvement on Agent Tasks
-            </h3>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-            <p className="font-bold text-gray-800 mb-3">📊 Complete Results Table:</p>
-            <div className="overflow-x-auto">
-              <table className="w-full text-xs">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="p-2 text-left border">Method</th>
-                    <th className="p-2 text-center border">GT Labels</th>
-                    <th className="p-2 text-center border">Test-Normal TGC</th>
-                    <th className="p-2 text-center border">Test-Challenge TGC</th>
-                    <th className="p-2 text-center border bg-yellow-100">Average</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="p-2 border font-semibold">ReAct (baseline)</td>
-                    <td className="p-2 text-center border">-</td>
-                    <td className="p-2 text-center border">63.7</td>
-                    <td className="p-2 text-center border">41.5</td>
-                    <td className="p-2 text-center border bg-gray-200 font-semibold">42.4</td>
-                  </tr>
-                  <tr>
-                    <td colSpan="5" className="p-2 bg-blue-50 font-semibold text-blue-700">Offline Adaptation</td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 border">ReAct + ICL</td>
-                    <td className="p-2 text-center border">✓</td>
-                    <td className="p-2 text-center border">64.3 <span className="text-green-600">(+0.6)</span></td>
-                    <td className="p-2 text-center border">46.0 <span className="text-green-600">(+4.5)</span></td>
-                    <td className="p-2 text-center border">46.0 <span className="text-green-600">(+3.6)</span></td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-2 border">ReAct + GEPA</td>
-                    <td className="p-2 text-center border">✓</td>
-                    <td className="p-2 text-center border">64.9 <span className="text-green-600">(+1.2)</span></td>
-                    <td className="p-2 text-center border">46.0 <span className="text-green-600">(+4.5)</span></td>
-                    <td className="p-2 text-center border">46.4 <span className="text-green-600">(+4.0)</span></td>
-                  </tr>
-                  <tr className="bg-green-100 font-bold">
-                    <td className="p-2 border">ReAct + ACE</td>
-                    <td className="p-2 text-center border">✓</td>
-                    <td className="p-2 text-center border">76.2 <span className="text-green-600">(+12.5)</span></td>
-                    <td className="p-2 text-center border">57.3 <span className="text-green-600">(+15.8)</span></td>
-                    <td className="p-2 text-center border bg-green-200">59.4 <span className="text-green-600">(+17.0)</span></td>
-                  </tr>
-                  <tr className="bg-green-50">
-                    <td className="p-2 border">ReAct + ACE (no labels)</td>
-                    <td className="p-2 text-center border">✗</td>
-                    <td className="p-2 text-center border">75.0 <span className="text-green-600">(+11.3)</span></td>
-                    <td className="p-2 text-center border">54.4 <span className="text-green-600">(+12.9)</span></td>
-                    <td className="p-2 text-center border">57.2 <span className="text-green-600">(+14.8)</span></td>
-                  </tr>
-                  <tr>
-                    <td colSpan="5" className="p-2 bg-purple-50 font-semibold text-purple-700">Online Adaptation</td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 border">ReAct + DC (CU)</td>
-                    <td className="p-2 text-center border">✗</td>
-                    <td className="p-2 text-center border">65.5 <span className="text-green-600">(+1.8)</span></td>
-                    <td className="p-2 text-center border">52.3 <span className="text-green-600">(+10.8)</span></td>
-                    <td className="p-2 text-center border">51.9 <span className="text-green-600">(+9.5)</span></td>
-                  </tr>
-                  <tr className="bg-green-100 font-bold">
-                    <td className="p-2 border">ReAct + ACE</td>
-                    <td className="p-2 text-center border">✗</td>
-                    <td className="p-2 text-center border">69.6 <span className="text-green-600">(+5.9)</span></td>
-                    <td className="p-2 text-center border">66.0 <span className="text-green-600">(+24.5)</span></td>
-                    <td className="p-2 text-center border bg-green-200">59.5 <span className="text-green-600">(+17.1)</span></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-3 gap-3">
-            <div className="bg-blue-50 p-3 rounded-lg border-2 border-blue-300">
-              <p className="font-bold text-blue-700 mb-2 text-sm">🎯 Key Finding #1</p>
-              <p className="text-xs text-gray-700 mb-1">
-                <strong>ACE beats GEPA by +13.0%</strong> (59.4% vs 46.4%)
-              </p>
-              <p className="text-xs text-gray-600">
-                Comprehensive playbooks outperform optimized short prompts
-              </p>
-            </div>
-
-            <div className="bg-purple-50 p-3 rounded-lg border-2 border-purple-300">
-              <p className="font-bold text-purple-700 mb-2 text-sm">🎯 Key Finding #2</p>
-              <p className="text-xs text-gray-700 mb-1">
-                <strong>ACE beats DC by +7.6%</strong> (59.5% vs 51.9%)
-              </p>
-              <p className="text-xs text-gray-600">
-                Delta updates prevent context collapse
-              </p>
-            </div>
-
-            <div className="bg-green-50 p-3 rounded-lg border-2 border-green-300">
-              <p className="font-bold text-green-700 mb-2 text-sm">🎯 Key Finding #3</p>
-              <p className="text-xs text-gray-700 mb-1">
-                <strong>Works without labels!</strong> (57.2% vs 59.4%)
-              </p>
-              <p className="text-xs text-gray-600">
-                Only 2.2% gap using execution feedback alone
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-400">
-            <p className="font-bold text-red-700 mb-2">🏆 AppWorld Leaderboard Standing:</p>
-            <div className="grid grid-cols-2 gap-3 text-xs">
-              <div className="bg-white p-2 rounded">
-                <p className="text-gray-700"><strong>IBM CUGA (GPT-4.1):</strong> 60.3% average</p>
-                <p className="text-gray-600 text-xs">#1 on leaderboard, production system</p>
-              </div>
-              <div className="bg-white p-2 rounded">
-                <p className="text-gray-700"><strong>ACE + DeepSeek-V3.1:</strong> 59.4% average</p>
-                <p className="text-green-600 text-xs">Matches #1 with smaller open-source model!</p>
-              </div>
-            </div>
-            <p className="text-xs text-gray-700 mt-2">
-              On test-challenge split: <strong>ACE surpasses IBM CUGA</strong> (66.0% vs ~57%)
-            </p>
-          </div>
-        </div>
-      )
-    },
-
-    // Slide 15: Results - Financial Benchmarks
-    {
-      title: "Results: Financial Analysis Benchmarks",
-      content: (
-        <div className="space-y-4">
-          <div className="bg-gradient-to-r from-green-100 to-blue-100 p-4 rounded-lg">
-            <h3 className="text-2xl font-bold text-center text-gray-800">
-              ACE Achieves +8.6% Average Improvement on Domain Tasks
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-              <p className="font-bold text-gray-800 mb-3">📊 FiNER Results:</p>
-              <table className="w-full text-xs">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="p-2 text-left border">Method</th>
-                    <th className="p-2 text-center border">Accuracy</th>
-                    <th className="p-2 text-center border">Δ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="p-2 border">Base LLM</td>
-                    <td className="p-2 text-center border">70.7%</td>
-                    <td className="p-2 text-center border">-</td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 border">ICL</td>
-                    <td className="p-2 text-center border">72.3%</td>
-                    <td className="p-2 text-center border text-green-600">+1.6%</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-2 border">GEPA</td>
-                    <td className="p-2 text-center border">73.5%</td>
-                    <td className="p-2 text-center border text-green-600">+2.8%</td>
-                  </tr>
-                  <tr className="bg-green-100 font-bold">
-                    <td className="p-2 border">ACE</td>
-                    <td className="p-2 text-center border">78.3%</td>
-                    <td className="p-2 text-center border text-green-600">+7.6%</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div className="mt-3 bg-green-50 p-2 rounded text-xs">
-                <p className="text-green-700 font-semibold">✓ ACE beats GEPA by +4.8%</p>
-                <p className="text-gray-600">Comprehensive XBRL knowledge helps</p>
-              </div>
-            </div>
-
-            <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-              <p className="font-bold text-gray-800 mb-3">📊 Formula Results:</p>
-              <table className="w-full text-xs">
-                <thead className="bg-gray-100">
-                  <tr>
-                    <th className="p-2 text-left border">Method</th>
-                    <th className="p-2 text-center border">Accuracy</th>
-                    <th className="p-2 text-center border">Δ</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="bg-gray-50">
-                    <td className="p-2 border">Base LLM</td>
-                    <td className="p-2 text-center border">67.5%</td>
-                    <td className="p-2 text-center border">-</td>
-                  </tr>
-                  <tr>
-                    <td className="p-2 border">ICL</td>
-                    <td className="p-2 text-center border">67.0%</td>
-                    <td className="p-2 text-center border text-red-600">-0.5%</td>
-                  </tr>
-                  <tr className="bg-gray-50">
-                    <td className="p-2 border">GEPA</td>
-                    <td className="p-2 text-center border">71.5%</td>
-                    <td className="p-2 text-center border text-green-600">+4.0%</td>
-                  </tr>
-                  <tr className="bg-green-100 font-bold">
-                    <td className="p-2 border">ACE</td>
-                    <td className="p-2 text-center border">85.5%</td>
-                    <td className="p-2 text-center border text-green-600">+18.0%</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div className="mt-3 bg-green-50 p-2 rounded text-xs">
-                <p className="text-green-700 font-semibold">✓ ACE beats GEPA by +14.0%</p>
-                <p className="text-gray-600">Massive gain on numerical reasoning</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-            <p className="font-bold text-gray-800 mb-3">📈 Why ACE Excels on Domain-Specific Tasks:</p>
-            <div className="grid grid-cols-2 gap-3 text-xs">
               <div className="space-y-2">
-                <div className="bg-blue-50 p-3 rounded">
-                  <p className="font-semibold text-blue-700 mb-1">Domain Concepts Accumulated</p>
-                  <p className="text-gray-700">• XBRL schema rules</p>
-                  <p className="text-gray-700">• Financial entity types (139 types)</p>
-                  <p className="text-gray-700">• Common calculation patterns</p>
-                  <p className="text-gray-700">• Industry-specific conventions</p>
-                </div>
-                <div className="bg-purple-50 p-3 rounded">
-                  <p className="font-semibold text-purple-700 mb-1">Failure Modes Learned</p>
-                  <p className="text-gray-700">• Edge cases in financial calculations</p>
-                  <p className="text-gray-700">• Common XBRL parsing errors</p>
-                  <p className="text-gray-700">• Misinterpretation of financial terms</p>
-                </div>
+                <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                  <p className="font-bold text-green-700 text-lg">Full ACE: 80.0%</p>
+                  <p className="text-sm text-gray-600">Complete system</p>
               </div>
-              <div className="bg-orange-50 p-3 rounded">
-                <p className="font-semibold text-orange-700 mb-1">Working Code Examples</p>
-                <p className="text-gray-700">• XBRL parsing templates</p>
-                <p className="text-gray-700">• Financial calculation functions</p>
-                <p className="text-gray-700">• Entity extraction patterns</p>
+
+                <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                  <p className="font-bold text-blue-700 text-lg">No Reflector: 72.3%</p>
+                  <p className="text-sm text-gray-600">-7.7% (no error analysis)</p>
+              </div>
+                
+                <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                  <p className="font-bold text-purple-700 text-lg">No Curator: 68.1%</p>
+                  <p className="text-sm text-gray-600">-11.9% (no playbook updates)</p>
+            </div>
+                
+                <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
+                  <p className="font-bold text-orange-700 text-lg">No Delta Updates: 65.4%</p>
+                  <p className="text-sm text-gray-600">-14.6% (full context rewriting)</p>
+          </div>
+
+                <div className="bg-red-50 p-3 rounded border-l-4 border-red-400">
+                  <p className="font-bold text-red-700 text-lg">No Grow-Refine: 70.8%</p>
+                  <p className="text-sm text-gray-600">-9.2% (single-round reflection)</p>
+              </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">📊 Key Insights</h4>
+              
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-yellow-50 p-3 rounded">
+                  <p className="font-semibold text-yellow-800 mb-2 text-sm">Most Critical:</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p>• Delta Updates (-14.6%)</p>
+                    <p>• Curator (-11.9%)</p>
+                    <p>• Grow-Refine (-9.2%)</p>
+            </div>
+          </div>
+
+                <div className="bg-blue-50 p-3 rounded">
+                  <p className="font-semibold text-blue-800 mb-2 text-sm">Less Critical:</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p>• Reflector (-7.7%)</p>
+                    <p>• Still significant impact</p>
+                    <p>• All components matter</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
-            <p className="text-sm font-semibold text-gray-800">
-              🎯 Key Takeaway: ACE's comprehensive playbooks excel at domain-specific tasks by accumulating detailed, actionable knowledge
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-sm font-semibold text-blue-800 mb-2">
+              💡 Interpretation:
             </p>
+            <div className="grid grid-cols-2 gap-2 text-xs text-gray-700">
+              <div>
+                <p className="font-semibold mb-1">Delta Updates:</p>
+                <p>• Prevents context collapse</p>
+                <p>• Most important innovation</p>
+              </div>
+              <div>
+                <p className="font-semibold mb-1">Three-Agent Design:</p>
+                <p>• Each agent has distinct role</p>
+                <p>• All contribute to success</p>
+              </div>
+            </div>
           </div>
         </div>
       )
     },
 
-    // Slide 15: Conclusion
+    // Slide 18: Learning Without Labels
     {
-      title: "Conclusion: The Future of Self-Improving LLMs",
+      title: "Learning Without Labels: The Self-Supervised Advantage",
       content: (
         <div className="space-y-4">
-          <div className="bg-gradient-to-r from-green-100 to-blue-100 p-6 rounded-lg">
-            <h3 className="text-3xl font-bold text-center text-gray-800 mb-4">
-              ACE: A Paradigm Shift in LLM Adaptation
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Why Self-Supervised Learning Matters
             </h3>
-            <p className="text-xl text-gray-700 text-center italic">
-              "From weight updates to context evolution"
+            <p className="text-center text-sm text-gray-600">
+              ACE learns from execution feedback, not human annotations
             </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-50 p-4 rounded-lg border-2 border-green-300">
-              <h4 className="font-bold text-green-700 mb-3 text-lg">🏆 Key Achievements</h4>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• <strong>+17.1% improvement</strong> on AppWorld agent tasks</li>
-                <li>• <strong>+8.6% average gain</strong> on domain-specific benchmarks</li>
-                <li>• <strong>86.9% lower latency</strong> than traditional fine-tuning</li>
-                <li>• <strong>Real-time adaptation</strong> during inference</li>
-                <li>• <strong>Human-interpretable</strong> knowledge accumulation</li>
-              </ul>
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">❌ Traditional Supervised Learning</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-red-50 p-2 rounded border-l-4 border-red-400">
+                  <p className="font-semibold text-red-700 text-sm">Requires Labels</p>
+                  <p className="text-xs text-gray-600">Human annotations for each task</p>
+            </div>
+                
+                <div className="bg-red-50 p-2 rounded border-l-4 border-red-400">
+                  <p className="font-semibold text-red-700 text-sm">Expensive</p>
+                  <p className="text-xs text-gray-600">Time-consuming annotation process</p>
+          </div>
+
+                <div className="bg-red-50 p-2 rounded border-l-4 border-red-400">
+                  <p className="font-semibold text-red-700 text-sm">Limited Scale</p>
+                  <p className="text-xs text-gray-600">Can't learn from unlimited tasks</p>
             </div>
 
-            <div className="bg-blue-50 p-4 rounded-lg border-2 border-blue-300">
-              <h4 className="font-bold text-blue-700 mb-3 text-lg">🔬 Technical Innovations</h4>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• <strong>Delta updates:</strong> Incremental knowledge addition</li>
-                <li>• <strong>Grow-and-refine:</strong> Balanced accumulation</li>
-                <li>• <strong>Three-agent architecture:</strong> Specialized roles</li>
-                <li>• <strong>Comprehensive playbooks:</strong> Detailed strategies</li>
-                <li>• <strong>Context preservation:</strong> No information loss</li>
-              </ul>
+                <div className="bg-red-50 p-2 rounded border-l-4 border-red-400">
+                  <p className="font-semibold text-red-700 text-sm">Static</p>
+                  <p className="text-xs text-gray-600">Fixed training set</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">✅ ACE Self-Supervised Learning</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">No Labels Needed</p>
+                  <p className="text-xs text-gray-600">Uses execution feedback only</p>
+                </div>
+                
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Scalable</p>
+                  <p className="text-xs text-gray-600">Can learn from unlimited tasks</p>
+                </div>
+                
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Continuous</p>
+                  <p className="text-xs text-gray-600">Learns during deployment</p>
+                </div>
+                
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Domain Agnostic</p>
+                  <p className="text-xs text-gray-600">Works across different domains</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="bg-white p-4 rounded-lg border-2 border-gray-300">
-            <h4 className="font-bold text-gray-800 mb-3 text-lg">🚀 Future Directions</h4>
-            <div className="grid grid-cols-3 gap-3 text-sm">
-              <div className="bg-purple-50 p-3 rounded">
-                <p className="font-semibold text-purple-700 mb-2">Multi-Modal ACE</p>
-                <p className="text-xs text-gray-700">Extend to vision, audio, and other modalities</p>
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">🔄 How ACE Learns from Execution</h4>
+            
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                <p className="font-semibold text-blue-700 text-sm mb-2">1. Task Execution</p>
+                <div className="text-xs text-gray-700 space-y-1">
+                  <p>• Generator attempts task with current playbook</p>
+                  <p>• Marks which bullets were helpful/harmful</p>
+                  <p>• Records execution trajectory</p>
+                </div>
               </div>
-              <div className="bg-orange-50 p-3 rounded">
-                <p className="font-semibold text-orange-700 mb-2">Federated Learning</p>
-                <p className="text-xs text-gray-700">Distributed playbook sharing across systems</p>
+
+              <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                <p className="font-semibold text-purple-700 text-sm mb-2">2. Error Analysis</p>
+                <div className="text-xs text-gray-700 space-y-1">
+                  <p>• Reflector analyzes what went wrong</p>
+                  <p>• Identifies root causes of failures</p>
+                  <p>• Generates corrective lessons</p>
+                </div>
               </div>
-              <div className="bg-green-50 p-3 rounded">
-                <p className="font-semibold text-green-700 mb-2">Production Systems</p>
-                <p className="text-xs text-gray-700">Real-world deployment and optimization</p>
+
+              <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                <p className="font-semibold text-green-700 text-sm mb-2">3. Knowledge Update</p>
+                <div className="text-xs text-gray-700 space-y-1">
+                  <p>• Curator adds new bullets to playbook</p>
+                  <p>• Preserves all existing knowledge</p>
+                  <p>• Ready for next task</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg border-l-4 border-blue-500">
-            <p className="text-lg font-semibold text-gray-800 mb-2">
-              💡 The Bottom Line: ACE proves that LLMs can continuously improve through context, not weights
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              🎯 Key Advantage: Continuous Learning
             </p>
-            <p className="text-sm text-gray-600">
-              This opens new possibilities for efficient, interpretable, and scalable AI systems that learn and adapt in real-time.
+            <p className="text-xs text-gray-700">
+              ACE can be deployed in production and continuously improve from real user interactions, 
+              without requiring any human supervision or annotation.
+              </p>
+            </div>
+        </div>
+      )
+    },
+
+    // Slide 19: Real-World Applications
+    {
+      title: "Real-World Applications & Impact",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Where ACE Can Make a Difference
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              Practical applications across industries and domains
+              </p>
+            </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🏢 Enterprise Applications</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-blue-50 p-2 rounded border-l-4 border-blue-400">
+                  <p className="font-semibold text-blue-700 text-sm">Customer Support</p>
+                  <p className="text-xs text-gray-600">Agents learn from each interaction</p>
+          </div>
+
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Code Review</p>
+                  <p className="text-xs text-gray-600">AI learns common patterns and mistakes</p>
+              </div>
+                
+                <div className="bg-purple-50 p-2 rounded border-l-4 border-purple-400">
+                  <p className="font-semibold text-purple-700 text-sm">Documentation</p>
+                  <p className="text-xs text-gray-600">Auto-generates and improves docs</p>
+              </div>
+                
+                <div className="bg-orange-50 p-2 rounded border-l-4 border-orange-400">
+                  <p className="font-semibold text-orange-700 text-sm">Testing</p>
+                  <p className="text-xs text-gray-600">Generates better tests over time</p>
+            </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🎓 Educational Applications</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-blue-50 p-2 rounded border-l-4 border-blue-400">
+                  <p className="font-semibold text-blue-700 text-sm">Tutoring Systems</p>
+                  <p className="text-xs text-gray-600">Adapts to student learning patterns</p>
+                </div>
+                
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Code Learning</p>
+                  <p className="text-xs text-gray-600">Teaches programming concepts</p>
+                </div>
+                
+                <div className="bg-purple-50 p-2 rounded border-l-4 border-purple-400">
+                  <p className="font-semibold text-purple-700 text-sm">Research Assistant</p>
+                  <p className="text-xs text-gray-600">Learns domain-specific knowledge</p>
+                </div>
+                
+                <div className="bg-orange-50 p-2 rounded border-l-4 border-orange-400">
+                  <p className="font-semibold text-orange-700 text-sm">Problem Solving</p>
+                  <p className="text-xs text-gray-600">Builds solution strategies</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">🚀 Deployment Scenarios</h4>
+            
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="bg-green-50 p-3 rounded">
+                <p className="font-semibold text-green-800 mb-2">Immediate</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• Code generation tools</p>
+                  <p>• API documentation</p>
+                  <p>• Test generation</p>
+                </div>
+              </div>
+              
+              <div className="bg-blue-50 p-3 rounded">
+                <p className="font-semibold text-blue-800 mb-2">Short-term</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• Customer support bots</p>
+                  <p>• Educational platforms</p>
+                  <p>• Research assistants</p>
+                </div>
+              </div>
+              
+              <div className="bg-purple-50 p-3 rounded">
+                <p className="font-semibold text-purple-800 mb-2">Long-term</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• Autonomous agents</p>
+                  <p>• Self-improving systems</p>
+                  <p>• Domain experts</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              💡 Key Insight: ACE Enables Continuous Improvement
+            </p>
+            <p className="text-xs text-gray-700">
+              Unlike traditional AI systems that are static after deployment, ACE-powered systems 
+              continuously learn and improve from real-world usage, making them more valuable over time.
             </p>
           </div>
         </div>
       )
     },
 
-    // Slide 16: Thank You
+    // Slide 20: Limitations & Future Work
     {
-      title: "Thank You",
+      title: "Limitations & Future Directions",
       content: (
-        <div className="flex flex-col items-center justify-center h-full space-y-8">
-          <div className="text-8xl mb-6">🎉</div>
-          <div className="text-center space-y-6">
-            <h2 className="text-5xl font-bold text-blue-600 mb-4">Thank You!</h2>
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-lg max-w-3xl">
-              <p className="text-2xl text-gray-700 mb-4">
-                Questions & Discussion
-              </p>
-              <p className="text-lg text-gray-600 mb-6">
-                ACE: Agentic Context Engineering for Self-Improving Language Models
-              </p>
-              <div className="border-t pt-4">
-                <p className="text-xl font-semibold text-gray-800">Presented by</p>
-                <p className="text-2xl font-bold text-blue-600 mt-2">Arpit Tiwari</p>
-                <p className="text-sm text-gray-500 mt-4">
-                  Stanford University & SambaNova Systems | arXiv:2510.04618
-                </p>
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-orange-50 to-red-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              Current Limitations & Research Opportunities
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              Honest assessment of what ACE can't do yet
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">⚠️ Current Limitations</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-red-50 p-2 rounded border-l-4 border-red-400">
+                  <p className="font-semibold text-red-700 text-sm">Context Window</p>
+                  <p className="text-xs text-gray-600">Playbook size limited by LLM context</p>
+              </div>
+                
+                <div className="bg-orange-50 p-2 rounded border-l-4 border-orange-400">
+                  <p className="font-semibold text-orange-700 text-sm">Domain Transfer</p>
+                  <p className="text-xs text-gray-600">Playbooks don't transfer across domains</p>
+            </div>
+
+                <div className="bg-yellow-50 p-2 rounded border-l-4 border-yellow-400">
+                  <p className="font-semibold text-yellow-700 text-sm">Error Propagation</p>
+                  <p className="text-xs text-gray-600">Bad bullets can hurt performance</p>
+                </div>
+                
+                <div className="bg-purple-50 p-2 rounded border-l-4 border-purple-400">
+                  <p className="font-semibold text-purple-700 text-sm">Computational Cost</p>
+                  <p className="text-xs text-gray-600">Still requires multiple LLM calls</p>
               </div>
             </div>
+          </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🔮 Future Research Directions</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-blue-50 p-2 rounded border-l-4 border-blue-400">
+                  <p className="font-semibold text-blue-700 text-sm">Hierarchical Playbooks</p>
+                  <p className="text-xs text-gray-600">Multi-level knowledge organization</p>
+                </div>
+                
+                <div className="bg-green-50 p-2 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm">Cross-Domain Transfer</p>
+                  <p className="text-xs text-gray-600">Learn general principles</p>
+                </div>
+                
+                <div className="bg-purple-50 p-2 rounded border-l-4 border-purple-400">
+                  <p className="font-semibold text-purple-700 text-sm">Quality Control</p>
+                  <p className="text-xs text-gray-600">Better bullet validation</p>
+                </div>
+                
+                <div className="bg-orange-50 p-2 rounded border-l-4 border-orange-400">
+                  <p className="font-semibold text-orange-700 text-sm">Efficiency</p>
+                  <p className="text-xs text-gray-600">Reduce computational overhead</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">🎯 Immediate Next Steps</h4>
+            
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="bg-green-50 p-3 rounded">
+                <p className="font-semibold text-green-800 mb-2">Short-term</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• Playbook compression</p>
+                  <p>• Better error handling</p>
+                  <p>• More benchmarks</p>
+                </div>
+              </div>
+              
+                <div className="bg-blue-50 p-3 rounded">
+                <p className="font-semibold text-blue-800 mb-2">Medium-term</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• Multi-agent coordination</p>
+                  <p>• Domain adaptation</p>
+                  <p>• Real-world deployment</p>
+                </div>
+              </div>
+              
+                <div className="bg-purple-50 p-3 rounded">
+                <p className="font-semibold text-purple-800 mb-2">Long-term</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• General intelligence</p>
+                  <p>• Self-modifying systems</p>
+                  <p>• Autonomous agents</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
+            <p className="text-sm font-semibold text-blue-800 mb-2">
+              🌟 Vision: The Future of AI
+            </p>
+            <p className="text-xs text-gray-700">
+              ACE represents a step toward AI systems that continuously learn and improve from experience, 
+              moving us closer to truly adaptive and intelligent systems that get better over time.
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 21: Key Takeaways
+    {
+      title: "Key Takeaways & Summary",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-4 rounded-lg">
+            <h3 className="text-xl font-bold text-center mb-2 text-gray-800">
+              What We've Learned
+            </h3>
+            <p className="text-center text-sm text-gray-600">
+              The essential insights from ACE research
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">🎯 Core Insights</h4>
+              
+              <div className="space-y-2">
+                <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                  <p className="font-semibold text-green-700 text-sm mb-1">Context &gt; Weights</p>
+                  <p className="text-xs text-gray-700">Improving context is more efficient than retraining weights</p>
+            </div>
+
+                <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                  <p className="font-semibold text-blue-700 text-sm mb-1">Comprehensive &gt; Concise</p>
+                  <p className="text-xs text-gray-700">Detailed playbooks outperform compressed summaries</p>
+            </div>
+                
+                <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                  <p className="font-semibold text-purple-700 text-sm mb-1">Additive &gt; Rewriting</p>
+                  <p className="text-xs text-gray-700">Delta updates prevent context collapse</p>
+          </div>
+
+                <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
+                  <p className="font-semibold text-orange-700 text-sm mb-1">Self-Supervised &gt; Supervised</p>
+                  <p className="text-xs text-gray-700">Execution feedback enables continuous learning</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+              <h4 className="font-bold text-gray-800 mb-3">📊 Performance Results</h4>
+              
+              <div className="grid grid-cols-2 gap-3">
+                <div className="bg-green-50 p-3 rounded">
+                  <p className="font-semibold text-green-800 mb-2 text-sm">Performance</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p>• +17% over GEPA</p>
+                    <p>• +13.3% over DC</p>
+                    <p>• +16.3% over baseline</p>
+                  </div>
+                </div>
+                
+                <div className="bg-blue-50 p-3 rounded">
+                  <p className="font-semibold text-blue-800 mb-2 text-sm">Efficiency</p>
+                  <div className="space-y-1 text-xs text-gray-700">
+                    <p>• 87% faster than GEPA</p>
+                    <p>• 85% faster than DC</p>
+                    <p>• 7.9x cheaper than GEPA</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-3">🚀 Impact & Implications</h4>
+            
+            <div className="grid grid-cols-3 gap-3 text-sm">
+              <div className="bg-green-50 p-3 rounded">
+                <p className="font-semibold text-green-800 mb-2">For Practitioners</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• Better AI systems</p>
+                  <p>• Lower costs</p>
+                  <p>• Continuous improvement</p>
+                </div>
+              </div>
+              
+              <div className="bg-blue-50 p-3 rounded">
+                <p className="font-semibold text-blue-800 mb-2">For Researchers</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• New paradigm</p>
+                  <p>• Rich research directions</p>
+                  <p>• Open questions</p>
+                </div>
+              </div>
+              
+              <div className="bg-purple-50 p-3 rounded">
+                <p className="font-semibold text-purple-800 mb-2">For Society</p>
+                <div className="space-y-1 text-xs text-gray-700">
+                  <p>• More capable AI</p>
+                  <p>• Better automation</p>
+                  <p>• Continuous learning</p>
+              </div>
+              </div>
+              </div>
+            </div>
+
+          <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">
+            <p className="text-sm font-semibold text-gray-800 mb-2">
+              💡 The Big Picture
+            </p>
+            <p className="text-xs text-gray-700">
+              ACE demonstrates that LLMs can learn and improve from experience without human supervision, 
+              opening the door to truly adaptive AI systems that get better over time.
+            </p>
+          </div>
+        </div>
+      )
+    },
+
+    // Slide 22: Thank You
+    {
+      title: "Thank You!",
+      content: (
+        <div className="flex flex-col items-center justify-center h-full space-y-6">
+          <div className="text-8xl mb-4">🚀✨</div>
+          <div className="text-center space-y-4">
+            <h2 className="text-5xl font-bold text-blue-600">Questions?</h2>
+            <div className="bg-blue-50 p-6 rounded-lg max-w-2xl">
+              <p className="text-2xl text-gray-800 font-semibold mb-2">
+                ACE: Agentic Context Engineering
+              </p>
+              <p className="text-xl text-gray-600 mb-4">
+                Evolving Contexts for Self-Improving Language Models
+              </p>
+              <div className="space-y-2 text-gray-700">
+                <p className="text-lg">Qizheng Zhang, Changran Hu, et al.</p>
+                <p className="text-md">Stanford University & SambaNova Systems</p>
+                <p className="text-sm text-blue-600 font-mono mt-4">arXiv:2510.04618v1 [cs.LG]</p>
+          </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-4 mt-8 max-w-4xl">
+            <div className="bg-green-50 p-4 rounded-lg text-center">
+              <p className="text-3xl font-bold text-green-600">+17%</p>
+              <p className="text-sm text-gray-600">Agent Performance</p>
+              </div>
+            <div className="bg-blue-50 p-4 rounded-lg text-center">
+              <p className="text-3xl font-bold text-blue-600">87%</p>
+              <p className="text-sm text-gray-600">Lower Latency</p>
+              </div>
+            <div className="bg-purple-50 p-4 rounded-lg text-center">
+              <p className="text-3xl font-bold text-purple-600">No Labels</p>
+              <p className="text-sm text-gray-600">Self-Improving</p>
+            </div>
+          </div>
+
+          <div className="text-center text-gray-500 text-sm mt-8 space-y-2">
+            <p className="text-lg font-semibold text-gray-700">Presented by</p>
+            <p className="text-2xl font-bold text-blue-600">Arpit Tiwari</p>
+            <p className="italic mt-4">Context is the new training!</p>
           </div>
         </div>
       )
@@ -1589,27 +1938,27 @@ const ACEPresentation = () => {
   ];
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    if (currentSlide < slides.length - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
 
-  // Add keyboard navigation
+  // Keyboard navigation
   useEffect(() => {
-    const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'ArrowLeft') {
-        prevSlide();
-      } else if (event.key === 'ArrowRight') {
-        nextSlide();
-      }
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
     };
-
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [currentSlide]);
@@ -1619,11 +1968,11 @@ const ACEPresentation = () => {
       {/* Header - Only show on title slide */}
       {currentSlide === 0 && (
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-6 flex-shrink-0">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-bold mb-2">ACE: Agentic Context Engineering</h1>
-            <p className="text-lg opacity-90">Teaching LLMs to Build Their Own Playbooks</p>
-          </div>
+        <div className="max-w-7xl mx-auto">
+          <h1 className="text-4xl font-bold mb-2">ACE: Agentic Context Engineering</h1>
+          <p className="text-lg opacity-90">Teaching LLMs to Build Their Own Playbooks</p>
         </div>
+      </div>
       )}
 
       {/* Slide Content */}
