@@ -328,7 +328,7 @@ const ACEPresentation = () => {
                 </div>
               </div>
 
-              <div className="text-center text-lg text-gray-600">After Iterative Optimization ➡️</div>
+              <div className="text-center text-lg text-gray-600">⬇️⬇️ After Iterative Optimization ⬇️⬇️</div>
 
               <div className="bg-red-50 p-3 rounded border-l-4 border-red-400">
                 <p className="font-semibold text-red-700 text-sm mb-2">Optimized Prompt (15 tokens):</p>
@@ -411,7 +411,9 @@ const ACEPresentation = () => {
                 </div>
               </div>
             </div>
+          </div>
 
+          <div className="grid grid-cols-2 gap-4">
             <div className="bg-gray-100 p-3 rounded">
               <p className="font-bold text-gray-800 mb-2 text-sm">🔍 What Happened?</p>
               <div className="text-xs text-gray-700 space-y-1">
@@ -422,18 +424,18 @@ const ACEPresentation = () => {
                 <p><strong>5. Performance:</strong> Worse than baseline (63.7% without any context)</p>
               </div>
             </div>
-          </div>
 
-          <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
-            <p className="text-sm font-semibold text-gray-800 mb-1">
-              🔥 Why This Happens:
-            </p>
-            <ul className="text-xs text-gray-700 space-y-1 ml-4">
-              <li>• LLMs are trained to be concise and helpful</li>
-              <li>• Rewriting 18K tokens is cognitively demanding</li>
-              <li>• Model takes shortcut: summarize instead of preserve + add</li>
-              <li>• No explicit mechanism to prevent information loss</li>
-            </ul>
+            <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-400">
+              <p className="text-sm font-semibold text-gray-800 mb-1">
+                🔥 Why This Happens:
+              </p>
+              <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                <li>• LLMs are trained to be concise and helpful</li>
+                <li>• Rewriting 18K tokens is cognitively demanding</li>
+                <li>• Model takes shortcut: summarize instead of preserve + add</li>
+                <li>• No explicit mechanism to prevent information loss</li>
+              </ul>
+            </div>
           </div>
         </div>
       )
@@ -561,6 +563,27 @@ const ACEPresentation = () => {
             </p>
           </div>
 
+          {/* ACE Workflow Diagram - Actual Image */}
+          <div className="bg-white p-6 rounded-lg border-2 border-gray-200">
+            <h4 className="font-bold text-gray-800 mb-4 text-center">🔄 ACE Workflow: Complete Cycle</h4>
+            
+            <div className="flex justify-center">
+              <div className="max-w-4xl">
+                <img 
+                  src="/ace_architecture.png" 
+                  alt="ACE Workflow Diagram showing Query + Context Playbook → Generator → Trajectory → Reflector → Insights → Curator → Delta Context Items → Update Playbook with feedback loops"
+                  className="w-full h-auto rounded-lg shadow-lg border border-gray-300"
+                />
+              </div>
+            </div>
+            
+            <div className="mt-4 text-center">
+              <p className="text-sm text-gray-600 italic">
+                Self-improving agentic system: Generate → Reflect → Curate → Update Playbook with iterative refinement loops
+              </p>
+            </div>
+          </div>
+
           <div className="space-y-3">
             <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
               <div className="flex items-start space-x-3">
@@ -650,6 +673,7 @@ const ACEPresentation = () => {
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       )
@@ -1927,6 +1951,44 @@ const ACEPresentation = () => {
                 <p className="text-md">Stanford University & SambaNova Systems</p>
                 <p className="text-sm text-blue-600 font-mono mt-4">arXiv:2510.04618v1 [cs.LG]</p>
           </div>
+            </div>
+          </div>
+
+          {/* Contact Information */}
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg max-w-2xl mt-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">Get in Touch!</h3>
+            <div className="grid grid-cols-2 gap-6">
+              <a 
+                href="mailto:arpitbittu143@gmail.com"
+                className="flex items-center space-x-3 p-4 bg-white rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
+              >
+                <div className="bg-red-100 p-2 rounded-full">
+                  <svg className="w-6 h-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-.904.732-1.636 1.636-1.636h3.819l6.545 4.91 6.545-4.91h3.819c.904 0 1.636.732 1.636 1.636z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-800">Email</p>
+                  <p className="text-sm text-gray-600">arpitbittu143@gmail.com</p>
+                </div>
+              </a>
+              
+              <a 
+                href="https://www.linkedin.com/in/arpit-tiwari-4a5538190/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 p-4 bg-white rounded-lg hover:bg-gray-50 transition-colors border border-gray-200"
+              >
+                <div className="bg-blue-100 p-2 rounded-full">
+                  <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-semibold text-gray-800">LinkedIn</p>
+                  <p className="text-sm text-gray-600">@arpit-tiwari-4a5538190</p>
+                </div>
+              </a>
             </div>
           </div>
 
