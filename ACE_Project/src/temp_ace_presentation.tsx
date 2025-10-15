@@ -22,7 +22,8 @@ const ACEPresentation = () => {
             <p className="text-xl text-gray-600">Stanford University & SambaNova Systems</p>
             <p className="text-lg text-gray-500">Qizheng Zhang, Changran Hu, et al., 2025</p>
             <p className="text-sm text-gray-400 mt-4">arXiv:2510.04618</p>
-            <p className="text-sm text-gray-500 mt-2 font-semibold">Presented by Arpit Tiwari</p>
+            <p className="text-lg text-gray-600 mt-2 font-semibold">Presented by Arpit Tiwari</p>
+            <p className="text-base text-gray-500 font-medium">Senior Data Scientist (GenAI)</p>
           </div>
         </div>
       )
@@ -34,14 +35,14 @@ const ACEPresentation = () => {
       content: (
         <div className="space-y-4">
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
-            <h3 className="text-3xl font-bold text-center text-gray-800 mb-4">45-60 Minute Deep Dive</h3>
+            <h3 className="text-3xl font-bold text-center text-gray-800 mb-4">ACE Framework: End-to-End Overview</h3>
           </div>
           
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg border-2 border-blue-200 shadow">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">1</div>
-                <h4 className="font-bold text-blue-700 text-xl">Motivation & Problems</h4>
+                <h4 className="font-bold text-blue-700 text-xl">The WHY: Motivation & Problem</h4>
               </div>
               <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Context adaptation paradigm</li>
@@ -53,7 +54,7 @@ const ACEPresentation = () => {
             <div className="bg-white p-6 rounded-lg border-2 border-purple-200 shadow">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="bg-purple-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">2</div>
-                <h4 className="font-bold text-purple-700 text-xl">The ACE Solution</h4>
+                <h4 className="font-bold text-purple-700 text-xl">The WHAT: The ACE Solution</h4>
               </div>
               <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Core philosophy</li>
@@ -65,7 +66,7 @@ const ACEPresentation = () => {
             <div className="bg-white p-6 rounded-lg border-2 border-green-200 shadow">
               <div className="flex items-center space-x-3 mb-3">
                 <div className="bg-green-500 text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg">3</div>
-                <h4 className="font-bold text-green-700 text-xl">How It Works</h4>
+                <h4 className="font-bold text-green-700 text-xl">The HOW: How It Works</h4>
               </div>
               <ul className="text-base text-gray-600 ml-13 space-y-2">
                 <li>• Complete workflow</li>
@@ -217,7 +218,7 @@ const ACEPresentation = () => {
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="grid grid-cols-2 gap-4">
             <div className="bg-white p-4 rounded-lg border-l-4 border-blue-400 shadow">
               <div className="flex items-start space-x-3">
                 <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">ICL</div>
@@ -260,6 +261,23 @@ const ACEPresentation = () => {
                     <p className="text-gray-700">• Accumulates knowledge across tasks</p>
                   </div>
                   <p className="text-xs text-gray-500 mt-1">✓ Inspired ACE, but vulnerable to context collapse</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg border-l-4 border-orange-400 shadow">
+              <div className="flex items-start space-x-3">
+                <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">M2</div>
+                <div className="flex-1">
+                  <h4 className="font-bold text-orange-700 mb-1">MIPROv2 (Multi-Intent Prompt Optimization v2)</h4>
+                  <p className="text-sm text-gray-600 mb-2">Adaptive multi-agent framework that refines prompts using intent decomposition and reflective reasoning</p>
+                  <div className="bg-gray-50 p-2 rounded text-xs">
+                    <p className="text-gray-700">• Decomposes tasks into structured sub-intents</p>
+                    <p className="text-gray-700">• Uses self-reflection and evaluation loops</p>
+                    <p className="text-gray-700">• Balances diversity (exploration) and precision</p>
+                    <p className="text-gray-700">• Integrates historical prompt-performance memory</p>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-1">✓ Outperforms GEPA and DC in complex reasoning tasks</p>
                 </div>
               </div>
             </div>
@@ -310,7 +328,7 @@ const ACEPresentation = () => {
                 </div>
               </div>
 
-              <div className="text-center text-2xl">⬇️ After Iterative Optimization ⬇️</div>
+              <div className="text-center text-lg text-gray-600">After Iterative Optimization ➡️</div>
 
               <div className="bg-red-50 p-3 rounded border-l-4 border-red-400">
                 <p className="font-semibold text-red-700 text-sm mb-2">Optimized Prompt (15 tokens):</p>
@@ -651,7 +669,7 @@ const ACEPresentation = () => {
             </p>
           </div>
 
-              <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-4">
             <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
               <div className="flex items-center space-x-3 mb-2">
                 <div className="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">1</div>
@@ -1506,7 +1524,7 @@ const ACEPresentation = () => {
           <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
             <h4 className="font-bold text-gray-800 mb-3">🔄 How ACE Learns from Execution</h4>
             
-            <div className="space-y-3">
+            <div className="grid grid-cols-3 gap-4">
               <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
                 <p className="font-semibold text-blue-700 text-sm mb-2">1. Task Execution</p>
                 <div className="text-xs text-gray-700 space-y-1">
@@ -1795,21 +1813,21 @@ const ACEPresentation = () => {
             <div className="bg-white p-4 rounded-lg border-2 border-gray-200">
               <h4 className="font-bold text-gray-800 mb-3">🎯 Core Insights</h4>
               
-              <div className="space-y-2">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="bg-green-50 p-3 rounded border-l-4 border-green-400">
                   <p className="font-semibold text-green-700 text-sm mb-1">Context &gt; Weights</p>
                   <p className="text-xs text-gray-700">Improving context is more efficient than retraining weights</p>
-            </div>
+                </div>
 
                 <div className="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
                   <p className="font-semibold text-blue-700 text-sm mb-1">Comprehensive &gt; Concise</p>
                   <p className="text-xs text-gray-700">Detailed playbooks outperform compressed summaries</p>
-            </div>
+                </div>
                 
                 <div className="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
                   <p className="font-semibold text-purple-700 text-sm mb-1">Additive &gt; Rewriting</p>
                   <p className="text-xs text-gray-700">Delta updates prevent context collapse</p>
-          </div>
+                </div>
 
                 <div className="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
                   <p className="font-semibold text-orange-700 text-sm mb-1">Self-Supervised &gt; Supervised</p>
