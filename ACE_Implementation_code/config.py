@@ -67,8 +67,8 @@ PLAYBOOK_CONFIG = {
 # Dataset configuration
 DATASET_CONFIG = {
     "name": "WikiSQL",
-    "source": "sample",  # Options: "sample", "huggingface", "file"
-    "file_path": None,
+    "use_real_data": True,  # If True, loads from HuggingFace WikiSQL; if False, uses dummy data
+    "file_path": None,  # For future: custom dataset file path
 }
 
 # Output configuration

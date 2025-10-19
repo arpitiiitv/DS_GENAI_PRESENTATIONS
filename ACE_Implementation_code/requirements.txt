@@ -16,7 +16,7 @@ anthropic>=0.18.0          # For Claude (optional)
 
 # ML and embeddings (for future enhancements)
 # transformers>=4.30.0
-# datasets>=2.14.0
+datasets>=2.14.0           # For WikiSQL and other datasets
 # sentence-transformers>=2.2.0
 
 # Utilities

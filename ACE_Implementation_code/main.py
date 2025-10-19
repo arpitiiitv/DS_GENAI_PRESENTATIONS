@@ -30,6 +30,7 @@ from config import (
     MODEL_CONFIG,
     OUTPUT_CONFIG,
     AZURE_OPENAI_CONFIG,
+    DATASET_CONFIG,
     get_config,
 )
 
@@ -69,6 +70,17 @@ def parse_args():
         help="Use real LLM instead of mock (requires API key)",
     )
     parser.add_argument(
+        "--use-real-data",
+        action="store_true",
+        default=DATASET_CONFIG["use_real_data"],
+        help="Use real WikiSQL dataset from HuggingFace (default: True)",
+    )
+    parser.add_argument(
+        "--use-dummy-data",
+        action="store_true",
+        help="Force use of dummy data instead of WikiSQL",
+    )
+    parser.add_argument(
         "--output",
         type=str,
         default=str(OUTPUT_CONFIG["results_file"]),
@@ -88,18 +100,22 @@ def main():
     print("ACE SQL QUERY GENERATOR - END-TO-END PROJECT")
     print("="*60 + "\n")
     
+    # Determine whether to use real data
+    use_real_data = args.use_real_data and not args.use_dummy_data
+    
     # Display configuration
     print("Configuration:")
     print(f"  Max Epochs: {args.epochs}")
     print(f"  Target Accuracy: {args.target_accuracy}%")
     print(f"  Sample Size: {args.sample_size}")
     print(f"  Test Ratio: {args.test_ratio}")
+    print(f"  Dataset: {'Real WikiSQL' if use_real_data else 'Dummy Data'}")
     print(f"  LLM: {'Real' if args.use_real_llm else 'Mock'}")
     print()
     
     # Step 1: Load Data
-    print("Step 1: Loading WikiSQL dataset...")
-    dataset = WikiSQLDataset(sample_size=args.sample_size)
+    print("Step 1: Loading dataset...")
+    dataset = WikiSQLDataset(sample_size=args.sample_size, use_real_data=use_real_data)
     train_data, test_data = dataset.get_train_test_split(test_ratio=args.test_ratio)
     print(f"  ✓ Training examples: {len(train_data)}")
     print(f"  ✓ Test examples: {len(test_data)}\n")
