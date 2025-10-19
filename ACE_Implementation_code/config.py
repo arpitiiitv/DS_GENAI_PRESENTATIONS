@@ -22,7 +22,7 @@ RESULTS_DIR.mkdir(exist_ok=True)
 # Training configuration
 TRAINING_CONFIG = {
     "num_epochs": 10,
-    "target_accuracy": 80.0,
+    "target_accuracy": 100.0,  # Always aim for 100% accuracy
     "test_ratio": 0.3,
     "sample_size": 10,
     "early_stopping": True,
