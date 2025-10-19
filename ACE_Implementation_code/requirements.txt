@@ -1,0 +1,31 @@
+# Core dependencies
+python>=3.8
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# LangChain for LLM integration
+langchain>=0.1.0
+langchain-openai>=0.0.5
+langchain-community>=0.0.20
+
+# LLM APIs
+openai>=1.0.0              # For OpenAI/Azure OpenAI
+anthropic>=0.18.0          # For Claude (optional)
+
+# ML and embeddings (for future enhancements)
+# transformers>=4.30.0
+# datasets>=2.14.0
+# sentence-transformers>=2.2.0
+
+# Utilities
+python-dotenv>=1.0.0       # For environment variables
+tqdm>=4.65.0               # Progress bars
+
+# Development tools (optional)
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0
+# mypy>=1.4.0
+

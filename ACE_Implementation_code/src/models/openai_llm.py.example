@@ -1,0 +1,94 @@
+"""
+OpenAI GPT LLM - Example implementation
+
+To use this:
+1. Rename this file to openai_llm.py
+2. Install: pip install openai
+3. Set your API key: export OPENAI_API_KEY="your-key"
+4. Update main.py to import and use this class
+"""
+
+from typing import Dict, List
+from openai import OpenAI
+from src.models.base_llm import BaseLLM
+from src.components.playbook import Playbook, Bullet
+
+
+class OpenAILLM(BaseLLM):
+    """OpenAI GPT implementation"""
+    
+    def __init__(self, api_key: str = None, model: str = "gpt-4"):
+        """
+        Initialize OpenAI GPT LLM
+        
+        Args:
+            api_key: OpenAI API key (or set OPENAI_API_KEY env var)
+            model: Model name to use (gpt-4, gpt-3.5-turbo, etc.)
+        """
+        self.client = OpenAI(api_key=api_key)
+        self.model = model
+    
+    def generate_sql(self, question: str, schema: Dict, playbook: Playbook, 
+                     relevant_bullets: List[Bullet]) -> str:
+        """
+        Generate SQL query using GPT
+        
+        Args:
+            question: Natural language question
+            schema: Database schema information
+            playbook: Current playbook knowledge
+            relevant_bullets: Relevant bullets from playbook
+            
+        Returns:
+            Generated SQL query string
+        """
+        # Build prompt using base class method
+        prompt = self._build_prompt(question, schema, playbook, relevant_bullets)
+        
+        # Call OpenAI API
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are an expert SQL generator. Generate only the SQL query, no explanations."
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                temperature=0.0,  # Deterministic for SQL generation
+                max_tokens=500
+            )
+            
+            # Extract SQL from response
+            sql_query = response.choices[0].message.content.strip()
+            
+            # Clean up response (remove markdown code blocks if present)
+            if "```sql" in sql_query:
+                sql_query = sql_query.split("```sql")[1].split("```")[0].strip()
+            elif "```" in sql_query:
+                sql_query = sql_query.split("```")[1].split("```")[0].strip()
+            
+            return sql_query
+            
+        except Exception as e:
+            print(f"Error calling OpenAI API: {e}")
+            # Fallback to simple query
+            return f"SELECT * FROM {schema.get('tables', ['table'])[0]}"
+
+
+# Example usage in main.py:
+"""
+from src.models.openai_llm import OpenAILLM
+from config import API_KEYS
+
+# Initialize LLM
+llm = OpenAILLM(api_key=API_KEYS["openai"], model="gpt-4")
+
+# Create generator with real LLM
+generator = Generator(llm=llm, use_mock_llm=False)
+"""
+

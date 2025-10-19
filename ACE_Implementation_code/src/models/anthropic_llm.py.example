@@ -1,0 +1,90 @@
+"""
+Anthropic Claude LLM - Example implementation
+
+To use this:
+1. Rename this file to anthropic_llm.py
+2. Install: pip install anthropic
+3. Set your API key: export ANTHROPIC_API_KEY="your-key"
+4. Update main.py to import and use this class
+"""
+
+from typing import Dict, List
+from anthropic import Anthropic
+from src.models.base_llm import BaseLLM
+from src.components.playbook import Playbook, Bullet
+
+
+class AnthropicLLM(BaseLLM):
+    """Claude LLM implementation"""
+    
+    def __init__(self, api_key: str = None, model: str = "claude-3-5-sonnet-20241022"):
+        """
+        Initialize Anthropic Claude LLM
+        
+        Args:
+            api_key: Anthropic API key (or set ANTHROPIC_API_KEY env var)
+            model: Model name to use
+        """
+        self.client = Anthropic(api_key=api_key)
+        self.model = model
+    
+    def generate_sql(self, question: str, schema: Dict, playbook: Playbook, 
+                     relevant_bullets: List[Bullet]) -> str:
+        """
+        Generate SQL query using Claude
+        
+        Args:
+            question: Natural language question
+            schema: Database schema information
+            playbook: Current playbook knowledge
+            relevant_bullets: Relevant bullets from playbook
+            
+        Returns:
+            Generated SQL query string
+        """
+        # Build prompt using base class method
+        prompt = self._build_prompt(question, schema, playbook, relevant_bullets)
+        
+        # Call Claude API
+        try:
+            response = self.client.messages.create(
+                model=self.model,
+                max_tokens=500,
+                temperature=0.0,  # Deterministic for SQL generation
+                messages=[
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ]
+            )
+            
+            # Extract SQL from response
+            sql_query = response.content[0].text.strip()
+            
+            # Clean up response (remove markdown code blocks if present)
+            if "```sql" in sql_query:
+                sql_query = sql_query.split("```sql")[1].split("```")[0].strip()
+            elif "```" in sql_query:
+                sql_query = sql_query.split("```")[1].split("```")[0].strip()
+            
+            return sql_query
+            
+        except Exception as e:
+            print(f"Error calling Anthropic API: {e}")
+            # Fallback to simple query
+            return f"SELECT * FROM {schema.get('tables', ['table'])[0]}"
+
+
+# Example usage in main.py:
+"""
+from src.models.anthropic_llm import AnthropicLLM
+from config import API_KEYS
+
+# Initialize LLM
+llm = AnthropicLLM(api_key=API_KEYS["anthropic"])
+
+# Create generator with real LLM
+generator = Generator(llm=llm, use_mock_llm=False)
+"""
+
