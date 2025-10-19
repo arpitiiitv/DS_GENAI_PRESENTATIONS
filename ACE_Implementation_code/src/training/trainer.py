@@ -82,6 +82,13 @@ class ACETrainer:
                 if is_correct:
                     correct += 1
                 
+                # Update bullet feedback (helpful/harmful tracking)
+                for bullet_id in used_bullets:
+                    if is_correct:
+                        self.playbook.update_bullet_feedback(bullet_id, is_helpful=True)
+                    else:
+                        self.playbook.update_bullet_feedback(bullet_id, is_helpful=False)
+                
                 # Reflect on the attempt
                 reflection = self.reflector.analyze(
                     example["question"],
@@ -153,7 +160,7 @@ class ACETrainer:
         results = []
         
         for idx, example in enumerate(test_data):
-            generated_sql, _ = self.generator.generate_sql(
+            generated_sql, used_bullets = self.generator.generate_sql(
                 example["question"],
                 example["schema"],
                 self.playbook
@@ -165,6 +172,13 @@ class ACETrainer:
             if is_correct:
                 correct += 1
             
+            # Update bullet feedback for evaluation as well
+            for bullet_id in used_bullets:
+                if is_correct:
+                    self.playbook.update_bullet_feedback(bullet_id, is_helpful=True)
+                else:
+                    self.playbook.update_bullet_feedback(bullet_id, is_helpful=False)
+            
             results.append({
                 "question": example["question"],
                 "generated": generated_sql,
@@ -172,8 +186,8 @@ class ACETrainer:
                 "is_correct": is_correct
             })
             
-            # Print some examples
-            if idx < 3:
+            # Print examples (show more than 3 for better visibility)
+            if idx < min(10, len(test_data)):
                 print(f"Example {idx + 1}:")
                 print(f"  Question: {example['question']}")
                 print(f"  Generated: {generated_sql}")

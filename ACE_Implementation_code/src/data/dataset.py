@@ -240,6 +240,157 @@ class WikiSQLDataset:
                 "sql": "SELECT customer, SUM(amount) FROM orders GROUP BY customer",
                 "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
             },
+            # Additional 30 basic SQL queries
+            {
+                "question": "Show all orders",
+                "sql": "SELECT * FROM orders",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "List all departments",
+                "sql": "SELECT * FROM departments",
+                "schema": {"tables": ["departments"], "columns": ["id", "name", "manager"]},
+            },
+            {
+                "question": "Get product IDs and names",
+                "sql": "SELECT id, name FROM products",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Find products priced at exactly 99.99",
+                "sql": "SELECT * FROM products WHERE price = 99.99",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Show orders from customer 'John'",
+                "sql": "SELECT * FROM orders WHERE customer = 'John'",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "Count total number of customers",
+                "sql": "SELECT COUNT(*) FROM customers",
+                "schema": {"tables": ["customers"], "columns": ["id", "name", "city", "email"]},
+            },
+            {
+                "question": "Find employees in Sales department",
+                "sql": "SELECT * FROM employees WHERE department = 'Sales'",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "Get minimum product price",
+                "sql": "SELECT MIN(price) FROM products",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "List customer emails",
+                "sql": "SELECT email FROM customers",
+                "schema": {"tables": ["customers"], "columns": ["id", "name", "city", "email"]},
+            },
+            {
+                "question": "Show products in Books category",
+                "sql": "SELECT * FROM products WHERE category = 'Books'",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Count employees per department",
+                "sql": "SELECT department, COUNT(*) FROM employees GROUP BY department",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "Find total sales amount",
+                "sql": "SELECT SUM(amount) FROM sales",
+                "schema": {"tables": ["sales"], "columns": ["id", "product", "amount", "date"]},
+            },
+            {
+                "question": "Show orders over 1000 dollars",
+                "sql": "SELECT * FROM orders WHERE amount > 1000",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "List employee names in IT",
+                "sql": "SELECT name FROM employees WHERE department = 'IT'",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "Get average employee salary",
+                "sql": "SELECT AVG(salary) FROM employees",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "Show customers from California",
+                "sql": "SELECT * FROM customers WHERE city = 'California'",
+                "schema": {"tables": ["customers"], "columns": ["id", "name", "city", "email"]},
+            },
+            {
+                "question": "Find products under 50 dollars",
+                "sql": "SELECT * FROM products WHERE price < 50",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Count orders by date",
+                "sql": "SELECT date, COUNT(*) FROM orders GROUP BY date",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "Show top 3 highest salaries",
+                "sql": "SELECT * FROM employees ORDER BY salary DESC LIMIT 3",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "List products alphabetically",
+                "sql": "SELECT * FROM products ORDER BY name ASC",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Find orders in January 2024",
+                "sql": "SELECT * FROM orders WHERE date >= '2024-01-01' AND date < '2024-02-01'",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "Get customer names and emails",
+                "sql": "SELECT name, email FROM customers",
+                "schema": {"tables": ["customers"], "columns": ["id", "name", "city", "email"]},
+            },
+            {
+                "question": "Show employees earning 50000 or more",
+                "sql": "SELECT * FROM employees WHERE salary >= 50000",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "Count products per category",
+                "sql": "SELECT category, COUNT(*) FROM products GROUP BY category",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Find average order amount",
+                "sql": "SELECT AVG(amount) FROM orders",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "List product names and categories",
+                "sql": "SELECT name, category FROM products",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
+            {
+                "question": "Show recent 5 orders",
+                "sql": "SELECT * FROM orders ORDER BY date DESC LIMIT 5",
+                "schema": {"tables": ["orders"], "columns": ["id", "customer", "amount", "date"]},
+            },
+            {
+                "question": "Find total revenue by product",
+                "sql": "SELECT product, SUM(amount) FROM sales GROUP BY product",
+                "schema": {"tables": ["sales"], "columns": ["id", "product", "amount", "date"]},
+            },
+            {
+                "question": "Get employees sorted by name",
+                "sql": "SELECT * FROM employees ORDER BY name ASC",
+                "schema": {"tables": ["employees"], "columns": ["id", "name", "salary", "department"]},
+            },
+            {
+                "question": "Show products priced between 10 and 100",
+                "sql": "SELECT * FROM products WHERE price >= 10 AND price <= 100",
+                "schema": {"tables": ["products"], "columns": ["id", "name", "price", "category"]},
+            },
         ]
         
         # Shuffle and select sample_size queries
