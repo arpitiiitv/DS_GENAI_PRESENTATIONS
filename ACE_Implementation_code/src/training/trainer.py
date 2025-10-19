@@ -14,19 +14,23 @@ from src.data.dataset import WikiSQLDataset
 class ACETrainer:
     """Main training loop for ACE"""
     
-    def __init__(self, dataset: WikiSQLDataset, generator: Generator = None):
+    def __init__(self, dataset: WikiSQLDataset, generator: Generator = None, 
+                 playbook: Playbook = None, embedding_service=None):
         """
         Initialize ACE trainer
         
         Args:
             dataset: Dataset to train on
             generator: Custom generator (optional)
+            playbook: Custom playbook (optional)
+            embedding_service: Embedding service for semantic search (optional)
         """
         self.dataset = dataset
-        self.playbook = Playbook()
+        self.playbook = playbook if playbook else Playbook()
         self.generator = generator if generator else Generator(use_mock_llm=True)
         self.reflector = Reflector()
         self.curator = Curator()
+        self.embedding_service = embedding_service
         
         self.metrics = {
             "accuracy_history": [],

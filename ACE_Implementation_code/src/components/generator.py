@@ -12,17 +12,22 @@ from src.models.mock_llm import MockLLM
 class Generator:
     """Generates SQL queries using current playbook"""
     
-    def __init__(self, llm: BaseLLM = None, use_mock_llm: bool = True):
+    def __init__(self, llm: BaseLLM = None, use_mock_llm: bool = True, 
+                 top_k_bullets: int = 5, similarity_threshold: float = 0.7):
         """
         Initialize generator
         
         Args:
             llm: LLM instance to use for generation (Claude, GPT, etc.)
             use_mock_llm: If True, use rule-based mock. If False, use provided LLM.
+            top_k_bullets: Number of most relevant bullets to retrieve
+            similarity_threshold: Minimum similarity for semantic search
         """
         self.use_mock_llm = use_mock_llm
         self.llm = llm if llm else MockLLM()
         self.used_bullets = []
+        self.top_k_bullets = top_k_bullets
+        self.similarity_threshold = similarity_threshold
     
     def generate_sql(self, question: str, schema: Dict, playbook: Playbook) -> Tuple[str, List[str]]:
         """
@@ -33,8 +38,12 @@ class Generator:
         """
         self.used_bullets = []
         
-        # Get relevant playbook knowledge
-        relevant_bullets = playbook.get_relevant_bullets(question, top_k=5)
+        # Get relevant playbook knowledge using semantic search
+        relevant_bullets = playbook.get_relevant_bullets(
+            question, 
+            top_k=self.top_k_bullets,
+            similarity_threshold=self.similarity_threshold
+        )
         self.used_bullets = [b.id for b in relevant_bullets]
         
         if self.use_mock_llm:

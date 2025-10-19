@@ -30,7 +30,9 @@ from config import (
     MODEL_CONFIG,
     OUTPUT_CONFIG,
     AZURE_OPENAI_CONFIG,
+    AZURE_OPENAI_EMBEDDING_CONFIG,
     DATASET_CONFIG,
+    PLAYBOOK_CONFIG,
     get_config,
 )
 
@@ -136,7 +138,11 @@ def main():
             if not AZURE_OPENAI_CONFIG["api_key"]:
                 print("  ⚠️  Azure OpenAI API key not found in .env file")
                 print("  ⚠️  Falling back to mock LLM")
-                generator = Generator(use_mock_llm=True)
+                generator = Generator(
+                    use_mock_llm=True,
+                    top_k_bullets=PLAYBOOK_CONFIG["top_k_bullets"],
+                    similarity_threshold=PLAYBOOK_CONFIG["similarity_threshold"]
+                )
             else:
                 llm = AzureOpenAILLM(
                     api_key=AZURE_OPENAI_CONFIG["api_key"],
@@ -145,26 +151,78 @@ def main():
                     model_name=AZURE_OPENAI_CONFIG["model_name"],
                     api_version=AZURE_OPENAI_CONFIG["api_version"],
                 )
-                generator = Generator(llm=llm, use_mock_llm=False)
+                generator = Generator(
+                    llm=llm,
+                    use_mock_llm=False,
+                    top_k_bullets=PLAYBOOK_CONFIG["top_k_bullets"],
+                    similarity_threshold=PLAYBOOK_CONFIG["similarity_threshold"]
+                )
         except ImportError as e:
             print(f"  ⚠️  Failed to import Azure OpenAI: {e}")
             print("  ⚠️  Install required packages: pip install langchain langchain-openai")
             print("  ⚠️  Falling back to mock LLM")
-            generator = Generator(use_mock_llm=True)
+            generator = Generator(
+                use_mock_llm=True,
+                top_k_bullets=PLAYBOOK_CONFIG["top_k_bullets"],
+                similarity_threshold=PLAYBOOK_CONFIG["similarity_threshold"]
+            )
         except Exception as e:
             print(f"  ⚠️  Error initializing Azure OpenAI: {e}")
             print("  ⚠️  Falling back to mock LLM")
-            generator = Generator(use_mock_llm=True)
+            generator = Generator(
+                use_mock_llm=True,
+                top_k_bullets=PLAYBOOK_CONFIG["top_k_bullets"],
+                similarity_threshold=PLAYBOOK_CONFIG["similarity_threshold"]
+            )
     else:
         print("  ℹ️  Using mock LLM (rule-based)")
-        generator = Generator(use_mock_llm=True)
+        generator = Generator(
+            use_mock_llm=True,
+            top_k_bullets=PLAYBOOK_CONFIG["top_k_bullets"],
+            similarity_threshold=PLAYBOOK_CONFIG["similarity_threshold"]
+        )
     
-    trainer = ACETrainer(dataset, generator=generator)
+    # Initialize embedding service for semantic search
+    embedding_service = None
+    if PLAYBOOK_CONFIG["use_semantic_search"]:
+        try:
+            from src.models.embedding_service import EmbeddingService, MockEmbeddingService
+            
+            if use_real_llm and AZURE_OPENAI_EMBEDDING_CONFIG["api_key"]:
+                print("  ℹ️  Initializing Azure OpenAI embeddings for semantic search...")
+                embedding_service = EmbeddingService(
+                    api_key=AZURE_OPENAI_EMBEDDING_CONFIG["api_key"],
+                    endpoint=AZURE_OPENAI_EMBEDDING_CONFIG["endpoint"],
+                    deployment_name=AZURE_OPENAI_EMBEDDING_CONFIG["deployment_name"],
+                    model_name=AZURE_OPENAI_EMBEDDING_CONFIG["model_name"],
+                    api_version=AZURE_OPENAI_EMBEDDING_CONFIG["api_version"],
+                )
+                print("  ✓ Real embeddings initialized")
+            else:
+                print("  ℹ️  Using mock embeddings (no API calls)")
+                embedding_service = MockEmbeddingService()
+        except Exception as e:
+            print(f"  ⚠️  Failed to initialize embeddings: {e}")
+            print("  ℹ️  Continuing without semantic search")
+    
+    # Initialize playbook with embedding service
+    playbook = Playbook(
+        embedding_service=embedding_service,
+        use_semantic_search=PLAYBOOK_CONFIG["use_semantic_search"]
+    )
+    
+    # Initialize trainer with playbook and generator
+    trainer = ACETrainer(
+        dataset, 
+        generator=generator,
+        playbook=playbook,
+        embedding_service=embedding_service
+    )
     
     print("  ✓ Generator initialized")
     print("  ✓ Reflector initialized")
     print("  ✓ Curator initialized")
-    print("  ✓ Playbook initialized\n")
+    print(f"  ✓ Playbook initialized (semantic search: {playbook.use_semantic_search})\n")
     
     # Step 3: Train
     print("Step 3: Training ACE offline (multi-epoch)...")

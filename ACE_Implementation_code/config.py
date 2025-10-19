@@ -45,6 +45,15 @@ AZURE_OPENAI_CONFIG = {
     "api_version": os.getenv("AZURE_OPENAI_API_MODEL_VERSION", "2025-01-01-preview"),
 }
 
+# Azure OpenAI Embeddings Configuration
+AZURE_OPENAI_EMBEDDING_CONFIG = {
+    "endpoint": os.getenv("AZURE_OPENAI_API_ENDPOINT", ""),
+    "api_key": os.getenv("AZURE_OPENAI_API_KEY", ""),
+    "deployment_name": os.getenv("AZURE_OPENAI_EMBEDDING_API_DEPLOYMENT_NAME", "text-embedding-ada-002"),
+    "model_name": os.getenv("AZURE_OPENAI_EMBEDDING_API_MODEL_NAME", "text-embedding-ada-002"),
+    "api_version": os.getenv("AZURE_OPENAI_API_MODEL_VERSION", "2025-01-01-preview"),
+}
+
 # API Keys (load from environment variables)
 API_KEYS = {
     "anthropic": os.getenv("ANTHROPIC_API_KEY", ""),
@@ -62,6 +71,9 @@ PLAYBOOK_CONFIG = {
     ],
     "duplicate_threshold": 0.8,
     "max_bullets_per_section": 50,
+    "use_semantic_search": True,  # Use semantic search for retrieving relevant bullets
+    "top_k_bullets": 5,  # Number of most relevant bullets to retrieve
+    "similarity_threshold": 0.7,  # Minimum similarity score for bullet retrieval
 }
 
 # Dataset configuration
